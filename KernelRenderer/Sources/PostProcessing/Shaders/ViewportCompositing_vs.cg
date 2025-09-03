@@ -1,0 +1,51 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_TRANSFORMATION
+//	The SIMPLE_TRANSFORMATION shader implements simple transformation
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+#define UVScale            register0
+#define viewportTransform  register1
+
+#define noiseOffset1  register5
+#define noiseOffset2  register6
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float4                  position : POSITION,				// Local-space position
+           float2                  texCoord : TEXCOORD0,			// Diffuse texture coordinate
+           uniform float4          UVScale           : register (c0),
+           uniform float4x4        viewportTransform : register (c1),
+           uniform float4		   noiseOffset1 : register (c5),
+           uniform float4		   noiseOffset2 : register (c6),
+
+           out float4              oPosition : POSITION,			// Output clip-space position
+           out float2              oTexCoord : TEXCOORD0,
+		   out float2			  TexCoordNoise1 : TEXCOORD1,	
+		   out float2			  TexCoordNoise2 : TEXCOORD2,
+		   out float2			  TexCoordMask   : TEXCOORD3
+		   )
+{
+    oPosition = mul(viewportTransform, position);
+
+	oTexCoord = texCoord * UVScale.xy + UVScale.zw;
+	TexCoordNoise1 = (texCoord + noiseOffset1.xy) * noiseOffset1.z;
+	TexCoordNoise2 = (texCoord + noiseOffset2.xy) * noiseOffset2.z;
+	TexCoordMask   = texCoord;
+}

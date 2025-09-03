@@ -1,0 +1,76 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define Map1	texture0
+#define Map2	texture1
+#define Map3	texture2
+#define Map4	texture3
+#define Map5	texture4
+#define Map6	texture5
+
+
+#define Ratio	register0
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+ 
+		   uniform samplerRECT  Map1  : register (s0), 
+		   uniform samplerRECT  Map2  : register (s1),
+
+#ifdef INPUTS4
+		   uniform samplerRECT  Map3  : register (s2),
+		   uniform samplerRECT  Map4  : register (s3),
+
+#ifdef INPUTS6
+		   uniform samplerRECT  Map5  : register (s4),
+		   uniform samplerRECT  Map6  : register (s5),   
+
+#endif
+#endif
+
+		   uniform float      Ratio     : register (c0),
+
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+
+  float4 sample = texRECT(Map1, texCoord);
+  sample += texRECT(Map2, texCoord);
+
+#ifdef INPUTS4
+  sample += texRECT(Map3, texCoord);
+  sample += texRECT(Map4, texCoord);
+
+#ifdef INPUTS6
+  sample += texRECT(Map5, texCoord);
+  sample += texRECT(Map6, texCoord);
+
+#endif
+#endif
+
+  oColor.rgb =  sample.rgb * Ratio;
+  oColor.a = 1.0;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

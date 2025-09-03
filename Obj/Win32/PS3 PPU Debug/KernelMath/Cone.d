@@ -1,0 +1,45 @@
+../Obj/Win32/PS3PPU~1/KERNEL~2/Cone.obj:  \
+ d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/Cone.cpp \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/../../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/../../../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/../../../../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/../../../../../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/../../../../../../../Root.h \
+  ../KernelCore/Sources/Mem/MemConfig.h \
+  ../KernelCore/Sources/Core/NewDelete.h \
+  ../KernelCore/Sources/Core/Types.h ../KernelCore/Sources/Core/Macros.h \
+  ../KernelCore/Sources/Core/Assert.h \
+  ../KernelCore/Sources/Core/Constants.h \
+  ../KernelCore/Sources/Core/Message.h \
+  ../KernelCore/Sources/Mem/MemInterface.h \
+  ../KernelCore/Sources/Mem/MemLibIdInterface.h \
+  ../KernelCore/Sources/Mem/MemLibId.h \
+  ../KernelCore/Sources/Mem/MemConfigInterface.h \
+  ../KernelCore/Sources/Mem/Mem.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/Cone.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/Vector.h \
+  ../KernelCore/Sources/Includes_PS3/Includes_PS3.h \
+  ../KernelCore/Sources/Core/DisableForceUseMath.h \
+  ../KernelCore/Sources/Core/ForceUseMath.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/VectorGen.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/VectorPS3.h \
+  ../KernelCore/Sources/Stream/iostream.h \
+  ../KernelMath/Sources/Math/Math.h \
+  ../KernelCore/Sources/Includes/Includes.h \
+  ../KernelMath/Sources/Math/Geometry/More/Angle3D.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/VectorPacked.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes0D/Point4D/Point4D.h \
+  ../KernelMath/Sources/Math/Geometry/Matrix/Matrix.h \
+  ../KernelMath/Sources/Math/Geometry/Matrix/MatrixGen.h \
+  ../KernelMath/Sources/Math/Geometry/Matrix/MatrixPS3.h \
+  ../KernelMath/Sources/Math/Geometry/Quaternions/Quaternion.h \
+  ../KernelMath/Sources/Math/Geometry/Vector2/Vector2.h \
+  ../KernelMath/Sources/Math/Geometry/Quaternions/QuaternionGen.h \
+  ../KernelMath/Sources/Math/Geometry/Quaternions/QuaternionPS3.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/OBB/OBB.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/BoundingVolume.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes2D/Plane/Plane.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes2D/Triangle/Triangle.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/Shapes/Shapes3D/Cone/cone.inl

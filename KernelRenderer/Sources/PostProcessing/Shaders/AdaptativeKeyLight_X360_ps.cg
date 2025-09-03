@@ -1,0 +1,55 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	Adaptative Key Light
+//
+//	PDE - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define newKeyLight	  texture0
+#define prevKeyLight  texture1
+#define persistance register0 
+#define minKey		register1 
+#define maxKey	    register2 
+#define manualKey	register3 
+#define manualRatio	register4 
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+
+void main (uniform sampler2D  newKeyLight   : register (s0),
+		   uniform sampler2D  prevKeyLight  : register (s1), 
+		   uniform float      persistance : register (c0),
+		   uniform float      minKey	  : register (c1),
+		   uniform float      maxKey      : register (c2),
+		   uniform float      manualKey   : register (c3),
+		   uniform float      manualRatio : register (c4),	   
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+  float val = tex2D(newKeyLight, float2(0.5, 0.5)).r;
+  val = lerp(val, manualKey, manualRatio);
+  if (val > maxKey) val = maxKey;
+  if (val < minKey) val = minKey;
+  
+  float oldVal = tex2D(prevKeyLight, float2(0.5, 0.5)).r;
+  oColor.rgb = lerp(oldVal, val, persistance);
+  oColor.a = 1.0;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

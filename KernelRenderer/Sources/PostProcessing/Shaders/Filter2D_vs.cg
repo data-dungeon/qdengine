@@ -1,0 +1,42 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_TRANSFORMATION
+//	The SIMPLE_TRANSFORMATION shader implements simple transformation
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+#define UVScale register0
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float4                  position : POSITION,				// Local-space position
+           float2                  texCoord : TEXCOORD0,			// Diffuse texture coordinate
+           uniform float4          UVScale  : register (c0),
+           out float4              oPosition : POSITION,			// Output clip-space position
+           out float2              oTexCoord : TEXCOORD0			// Output diffuse texture coordinate
+		   )
+{
+
+    oPosition = position;
+    oTexCoord = texCoord * UVScale.xy + UVScale.zw;
+}
+
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

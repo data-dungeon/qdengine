@@ -1,0 +1,49 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	Luminance Extraction
+//
+//	PDE - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+
+void main (float2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+ 
+		   uniform samplerRECT  diffuseMap  : register (s0),  // Diffuse texture map
+           out float4           oColor      : COLOR)			// Final fragment color
+{
+  float4 sample = texRECT(diffuseMap, texCoord);
+
+  float luma = (sample.r + sample.g + sample.b) / 3.0;
+  
+  if (isnan(luma) || isinf(luma)) // évites de propager les singularités numériques dans la key light
+  {
+	luma = 0.5;
+  }
+  
+  oColor.rgb = luma;
+  oColor.a = sample.a;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

@@ -1,0 +1,57 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+
+#define offsets0   register0  // 8 x Float2 offset
+#define offsets1   register1
+#define offsets2   register2
+#define offsets3   register3
+
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (half2             texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+           uniform sampler2D  diffuseMap  : register (s0),  // Diffuse texture map
+
+           uniform half4     offsets0    : register (c0),   // 8 x Float2 offset
+           uniform half4     offsets1    : register (c1),
+           uniform half4     offsets2    : register (c2),
+           uniform half4     offsets3    : register (c3),
+
+           out half4         oColor      : COLOR)			// FinalSfragment color
+{
+	oColor =  tex2D(diffuseMap, texCoord + offsets0.xy);
+	oColor += tex2D(diffuseMap, texCoord + offsets0.zw);
+	oColor += tex2D(diffuseMap, texCoord + offsets1.xy);
+	oColor += tex2D(diffuseMap, texCoord + offsets1.zw);
+	oColor += tex2D(diffuseMap, texCoord + offsets2.xy);
+	oColor += tex2D(diffuseMap, texCoord + offsets2.zw);
+	oColor += tex2D(diffuseMap, texCoord + offsets3.xy);
+	oColor += tex2D(diffuseMap, texCoord + offsets3.zw);
+	oColor /= 8.0;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

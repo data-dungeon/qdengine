@@ -1,0 +1,2441 @@
+<?xml version="1.0" encoding = "Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.00"
+	Name="KernelRenderer"
+	ProjectGUID="{238F3E10-1BD5-4969-BF61-B26541568151}"
+	SccProjectName="RD/QDT 3_5 PC"
+	SccAuxPath=""
+	SccLocalPath=".."
+	SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Win32 Debug|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include;..\..\Opengl\Include;&quot;..\..\Shader Tools\NVidia_SDK_9_5_Cg\include&quot;"
+				PreprocessorDefinitions="WIN32;_DEBUG;QDT_DEBUG;_LIB;PLATFORM_PC"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32 Release|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2"
+			WholeProgramOptimization="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				GlobalOptimizations="TRUE"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include;..\..\Opengl\include;&quot;..\..\Shader Tools\NVidia_SDK_9_5_Cg\include&quot;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_LIB;PLATFORM_PC"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalOptions=" /LTCG "
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="PS3 PPU Debug|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="0"
+			DeleteExtensionsOnClean="*.obj;*.d;*.map;*.lst;*.pch;$(TargetPath)">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="-g -fno-exceptions -fno-rtti -fsigned-char"
+				Optimization="0"
+				AdditionalIncludeDirectories="&quot;..&quot;;&quot;$(SN_PS3_PATH)\include&quot;;&quot;$(SCE_PS3_ROOT)\target-ceb\ppu\include&quot;"
+				PreprocessorDefinitions="_DEBUG;QDT_DEBUG;_LIB;SN_TARGET_PS3;PLATFORM_PS3;__GCC__"
+				BasicRuntimeChecks="0"
+				RuntimeLibrary="4"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName="$(IntDir)/"
+				WarningLevel="1"
+				WarnAsError="FALSE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="0"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalDependencies=""
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32 FastDebug|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				OptimizeForProcessor="2"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include;..\..\Opengl\include;&quot;..\..\Shader Tools\NVidia_SDK_9_5_Cg\include&quot;"
+				PreprocessorDefinitions="QDT_DEBUG;_AFX_NO_DEBUG_CRT;_WINDOWS;DIRECTDRAW;PLATFORM_PC;DIRECTSOUND;DIRECTINPUT;NDEBUG;__NEW_ANIM__;WIN32;QDT_INCLUDE_CI;__RENDERMANAGER__;__NEW_KERNEL__;"
+				BasicRuntimeChecks="0"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="FALSE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="PS3 PPU Release|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			DeleteExtensionsOnClean="*.obj;*.d;*.map;*.lst;*.pch;$(TargetPath)">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="-g -w -fno-exceptions -O2 -fno-rtti -fsigned-char"
+				AdditionalIncludeDirectories="&quot;..&quot;;&quot;$(SN_PS3_PATH)\include&quot;;&quot;$(SCE_PS3_ROOT)\target-ceb\ppu\include&quot;"
+				PreprocessorDefinitions="_LIB;SN_TARGET_PS3;PLATFORM_PS3;__GCC__"
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName="$(IntDir)/"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalDependencies=""
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32_Profile|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2"
+			WholeProgramOptimization="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				GlobalOptimizations="TRUE"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include;..\..\Opengl\include;&quot;..\..\Shader Tools\NVidia_SDK_9_5_Cg\include&quot;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_LIB;PLATFORM_PC"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="TRUE"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalOptions=" /LTCG "
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter
+			Name="Sources"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath="Sources\Root.h">
+			</File>
+			<Filter
+				Name="Renderer"
+				Filter="">
+				<File
+					RelativePath="Sources\Renderer\IIndexBuffer.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\IPixelShader.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\IRenderContextImplementor.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\IRenderTarget.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\ISwapChain.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\ITexture.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\IVertexBuffer.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\IVertexDeclaration.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\IVertexShader.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\RenderContext.cpp">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\RenderContext.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\RenderContext.inl">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\RendererTypeDefs.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\Root.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\SRenderMode.h">
+				</File>
+				<File
+					RelativePath="Sources\Renderer\SVertexElement.h">
+				</File>
+				<Filter
+					Name="D3D9_PC"
+					Filter="">
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\CubeRenderTarget_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\CubeRenderTarget_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\CubeTexture_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\CubeTexture_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\IndexBuffer_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\IndexBuffer_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\PixelShader_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\PixelShader_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\RenderContext_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\RenderContext_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\RenderTarget_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\RenderTarget_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\Texture_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\Texture_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VertexBuffer_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VertexBuffer_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VertexDeclaration_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VertexDeclaration_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VertexShader_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VertexShader_D3D9_PC.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VolumeTexture_D3D9_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\D3D9_PC\VolumeTexture_D3D9_PC.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="PSGL"
+					Filter="">
+					<File
+						RelativePath="Sources\Renderer\PSGL\CubeRenderTarget_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\CubeRenderTarget_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\CubeTexture_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\CubeTexture_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\Error.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\Error.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\IndexBuffer_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\IndexBuffer_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\PixelShader_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\PixelShader_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\RenderContext_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\RenderContext_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\RenderTarget_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\RenderTarget_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\Texture_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\Texture_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VertexBuffer_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VertexBuffer_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VertexDeclaration_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VertexDeclaration_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VertexShader_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VertexShader_PSGL.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VolumeTexture_PSGL.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\PSGL\VolumeTexture_PSGL.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="OGL_PC"
+					Filter="">
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\CubeRenderTarget_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\CubeRenderTarget_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\CubeTexture_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\CubeTexture_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\Error.cpp">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\Error.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\GLExtensions.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\IndexBuffer_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\IndexBuffer_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\PixelShader_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\PixelShader_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\RenderContext_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\RenderContext_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\RenderTarget_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\RenderTarget_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\Texture_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\Texture_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VertexBuffer_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VertexBuffer_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VertexDeclaration_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VertexDeclaration_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VertexShader_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VertexShader_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VolumeTexture_OGL_PC.cpp">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\VolumeTexture_OGL_PC.h">
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Renderer\OGL_PC\glh_extensions.h">
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="PostProcessing"
+				Filter="">
+				<File
+					RelativePath="Sources\PostProcessing\Filter2D.cpp">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\Filter2D.h">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\Filter2DConvolution.cpp">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\Filter2DConvolution.h">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\Photographic_Pipeline.cpp">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\Photographic_Pipeline.h">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\Root.h">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\ViewportState.cpp">
+				</File>
+				<File
+					RelativePath="Sources\PostProcessing\ViewportState.h">
+				</File>
+				<Filter
+					Name="Shaders"
+					Filter="">
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\AdaptativeKeyLight_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\AverageConvolution_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\AverageTextures_ps.build.xml">
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\AverageTextures_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\BrightPass_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\Convolution16_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\Convolution8_fixed_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\Convolution8_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\Filter2D_fixed_vs.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\Filter2D_vs.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\IdentityFilter_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_3
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_3
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_3
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_3
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_3
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_3
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightCompositing_ps.build.xml">
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightCompositing_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightDebug_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightGhostsPropagate_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightGhostsPropagate_vs.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightGhosts_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LightGhosts_vs.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\LuminanceExtraction_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\ToneMapping_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\ViewportCompositing_ps.build.xml">
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\ViewportCompositing_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -buildfile
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\ViewportCompositing_vs.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\PostProcessing\Shaders\WheightedConvolution_ps.cg">
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCustomBuildTool"
+								CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps
+"
+								Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+						</FileConfiguration>
+					</File>
+				</Filter>
+			</Filter>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

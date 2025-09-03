@@ -1,0 +1,60 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_TRANSFORMATION
+//	The SIMPLE_TRANSFORMATION shader implements simple transformation
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+#define UVScale        register0
+#define ScaleOctaves1  register1
+#define ScaleOctaves2  register2
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float4                  position : POSITION,				// Local-space position
+           float2                  texCoord : TEXCOORD0,			// Diffuse texture coordinate
+           uniform float4          UVScale       : register (c0),
+           uniform float4          ScaleOctaves1 : register (c1),
+           uniform float4          ScaleOctaves2 : register (c2),
+
+           out float4              oPosition : POSITION,			// Output clip-space position
+           out float2              oTexOctave1 : TEXCOORD0,
+           out float2              oTexOctave2 : TEXCOORD1,
+           out float2              oTexOctave3 : TEXCOORD2,
+           out float2              oTexOctave4 : TEXCOORD3,
+           out float2              oTexOctave5 : TEXCOORD4,
+           out float2              oTexOctave6 : TEXCOORD5,
+           out float2              oTexOctave7 : TEXCOORD6,
+           out float2              oTexOctave8 : TEXCOORD7
+		   )
+{
+    oPosition = position;
+
+
+	float2 center   = float2(0.5, 0.5) * UVScale.xy;
+	float2 coordsCentered   = (texCoord * UVScale.xy  - center);
+
+	oTexOctave1 =    coordsCentered * ScaleOctaves1.x + center;
+	oTexOctave2 =    coordsCentered * ScaleOctaves1.y + center;
+	oTexOctave3 =    coordsCentered * ScaleOctaves1.z + center;
+	oTexOctave4 =    coordsCentered * ScaleOctaves1.w + center;
+	oTexOctave5 =    coordsCentered * ScaleOctaves2.x + center;
+	oTexOctave6 =    coordsCentered * ScaleOctaves2.y + center;
+	oTexOctave7 =    coordsCentered * ScaleOctaves2.z + center;
+	oTexOctave8 =    coordsCentered * ScaleOctaves2.w + center;
+}

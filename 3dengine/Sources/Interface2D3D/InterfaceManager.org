@@ -1,0 +1,138 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	CLASS:	INTERFACE_MANAGER
+//	The INTERFACE_MANAGER class implements ...
+//
+//	01-09-24:	GGO - Created
+//*****************************************************************************
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+class	IHM_INTERFACE;
+class	IHM_PAGE;
+class	IHM_ELEMENTS_LIST;
+class	IHM_ELEMENT_ABC;
+class	QTE;
+
+
+class	INTERFACE_MANAGER : public COM_OBJECT
+{
+public:
+
+	enum	EVENT
+	{
+		ON_UP		= (1 << 0),
+		ON_DOWN		= (1 << 1),
+		ON_LEFT		= (1 << 2),
+		ON_RIGHT	= (1 << 3),
+		ON_OK		= (1 << 4),
+		ON_CANCEL	= (1 << 5),
+		ON_LBUTTON	= (1 << 6),
+	};
+
+
+	/** Destructor. */
+							   ~INTERFACE_MANAGER();
+	/** For singleton : Instance */
+	static INTERFACE_MANAGER*	Instance();
+	/** For singleton : Suicide */
+	static void					Suicide();
+
+
+	/** Update the time of every interface element. */
+	void						Loop(float rTime);
+	void						Update();
+	void						Display();
+	void						AddQTE(COM_INSTANCE CO);
+	void						AddInterface(IHM_INTERFACE *pInterface);
+	void						RemoveInterface(IHM_INTERFACE *pInterface);
+	bool						IsInterfaceActivated(IHM_INTERFACE *pInterface);
+	void						SetMousePosX(int nX);
+	void						SetMousePosY(int nY);
+	int							GetMousePosX() const;
+	int							GetMousePosY() const;
+	void						SetInputValue(int nInputValue);
+	void						GetWindowSize(int &nWidth, int &nHeight) const;
+	int							GetWindowWidth() const;
+	int							GetWindowHeight() const;
+	void						AddAlwaysOnTopElement(IHM_ELEMENT_ABC *pElement);
+
+	// To protect observers.
+	INDEX_INT*					GetObjNotToDestroy(const unsigned int nObjectIndex) const;
+	unsigned int				GetNbrObjNotToDestroy() const;
+
+	// Public for an easier access from the callback.
+	bool						_bLButtonDown;
+
+	// Debug display.
+	void						EnableIHMDebugDisplay(const bool bEnable);
+	bool						IsIHMDebugDisplayEnabled() const;
+	COLOR_FLOAT					GetIHMDebugDisplayColor() const;
+
+
+	//==== COM OBJECT STUFF =====
+
+	virtual bool				ReceiveCommandProc(int CommandID, PARAMETER_STACK& ps);
+	virtual int					GetNbChunk() const;
+	virtual const class OLD_CHUNK&	GetChunk(int IndexChunk) const;
+	virtual bool				Write(const class OLD_CHUNK &Chunk, class IO_STREAM &Stream) const;
+	virtual bool				Read( const class OLD_CHUNK &Chunk, class IO_STREAM &Stream);
+	virtual void*				GetObject() {return this;}
+	virtual DESC*				GetDesc() const;
+
+	//====
+protected:
+	void		ClearAllInterfaces();
+	void		ClearAllQTE();
+
+private:
+
+	friend class INTERFACE_MANAGER_DESC;
+	//==== CHUNK =====
+	enum
+	{
+		NB_CHUNK = 1,
+	};
+	static int				_nNbChunk;
+	static OLD_CHUNK	_ChunkList[NB_CHUNK];
+	//====
+
+								INTERFACE_MANAGER();
+	void						HandleQTE(float rTime);
+	void						HandleInterfaces(float rTime);
+	void						DisplayQTE();
+	void						DisplayInterfaces();
+
+	static INTERFACE_MANAGER *	_pInstance;
+
+	QDT_VECTOR<IHM_ELEMENT_ABC*>_vAlwaysOnTopElements;
+	QDT_DLIST<INDEX_INT*>		_lstInterfaces;
+	QDT_DLIST<COM_INSTANCE>		_lstRunningQTE;
+	INDEX_INT *					_pMouseObserver;
+	INDEX_INT *					_pKeyboardObserver;
+	int							_nMousePosX;
+	int							_nMousePosY;
+	int							_nInputValue;
+	int							_nWindowWidth, _nWindowHeight;
+	bool						_bIHMDebugDisplayEnable;
+	
+	QDT_VECTOR<INDEX_INT*>		vIndexIntToProtect;
+};
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

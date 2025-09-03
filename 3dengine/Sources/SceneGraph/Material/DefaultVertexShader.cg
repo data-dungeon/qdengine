@@ -1,0 +1,46 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	DefaultVertexShader
+//
+//	05-11-18:	ELE - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define modelViewProj	register0
+#define lightDir		register4
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float4                  position : POSITION,				// Local-space position
+		   float3				   normal : NORMAL,					// Local-space normal
+ 
+           uniform float4x4        modelViewProj : register (c0),	// Local-to-clip matrix
+           uniform float4		   lightDir : register (c4),
+
+           out float4              oPosition : POSITION,			// Output clip-space position
+           out float4              oColor    : COLOR0				// Output color
+		   )
+{
+    oPosition = mul(modelViewProj, position);
+   
+    float diffuse = max(dot(float4(normal, 1), lightDir), 0);
+    oColor = float4(1, 1, 1, 1) * diffuse;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

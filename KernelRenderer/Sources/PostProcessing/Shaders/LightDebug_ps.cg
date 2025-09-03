@@ -1,0 +1,71 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+#define keyLight    texture1
+
+#define Exposure    register0
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+ 
+		   uniform samplerRECT  diffuseMap  : register (s0),    
+		   uniform sampler2D    keyLight    : register (s1),  
+
+		   uniform float      Exposure      : register (c0),
+
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+  float4 sample = texRECT(diffuseMap, texCoord);
+
+
+  float3 heat[9] = {float3(0.0, 0.0, 0.0), float3(0.2, 0.0, 0.4), float3(0.0, 0.0, 1.0),
+					float3(0.0, 1.0, 0.0), float3(1.0, 1.0, 0.0), float3(1.0, 0.6, 0.0),
+					float3(1.0, 0.0, 0.0), float3(0.0, 0.0, 0.0), float3(1.0, 1.0, 1.0)};
+  
+  float luma = sqrt((sample.r + sample.g + sample.b) / 3.0) * 4.426;
+
+  if (luma <= 1.0)
+	oColor.rgb = lerp(heat[0], heat[1], luma);
+  else if (luma <= 2.0)
+	oColor.rgb = lerp(heat[1], heat[2], luma - 1.0);
+  else if (luma <= 3.0)
+	oColor.rgb = lerp(heat[2], heat[3], luma - 2.0);
+  else if (luma <= 4.0)
+	oColor.rgb = lerp(heat[3], heat[4], luma - 3.0);
+  else if (luma <= 5.0)
+	oColor.rgb = lerp(heat[4], heat[5], luma - 4.0);
+  else if (luma <= 6.0)
+	oColor.rgb = lerp(heat[5], heat[6], luma - 5.0);
+  else if (luma <= 7.0)
+	oColor.rgb = lerp(heat[6], heat[7], luma - 6.0);
+  else
+	oColor.rgb = lerp(heat[7], heat[8], saturate(luma - 7.0));
+  
+
+  oColor.a = sample.a;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

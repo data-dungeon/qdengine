@@ -1,0 +1,58 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_TRANSFORMATION
+//	The SIMPLE_TRANSFORMATION shader implements simple transformation
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+#define UVScale  register0
+#define UVScale2 register1
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (
+		   float4                  position : POSITION,				// Local-space position
+           float2                  texCoord : TEXCOORD0,			// Diffuse texture coordinate
+           uniform float4          UVScale  : register (c0),
+		   uniform float4          UVScale2 : register (c1),
+
+           out float4              oPosition : POSITION,			// Output clip-space position
+           out float2              oTexCoordColor1 : TEXCOORD0,
+           out float2              oTexCoordMask1  : TEXCOORD1,
+           out float2              oTexCoordColor2 : TEXCOORD2,
+           out float2              oTexCoordMask2  : TEXCOORD3
+		   )
+{
+    oPosition = position;
+
+	float2 coordsScaled =  texCoord * UVScale.xy;
+	float2 center       =  float2(0.5, 0.5);
+	float2 centerScaled =  center * UVScale.xy;
+
+
+    oTexCoordColor1 = coordsScaled;
+	oTexCoordMask1  = texCoord;
+
+    oTexCoordColor2 = (coordsScaled - centerScaled) * -2.5 + centerScaled;
+	oTexCoordMask2  = (texCoord     - center      ) * -2.5 + center;
+}
+
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

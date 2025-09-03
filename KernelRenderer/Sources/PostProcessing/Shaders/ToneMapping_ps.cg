@@ -1,0 +1,50 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+#define keyLight    texture1
+
+#define Exposure    register0
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+ 
+		   uniform samplerRECT  diffuseMap  : register (s0),    
+		   uniform sampler2D    keyLight    : register (s1),  
+
+		   uniform float      Exposure      : register (c0),
+
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+  float4 sample = texRECT(diffuseMap, texCoord);
+
+  float key = tex2D(keyLight, float2(0.5, 0.5)).r;
+  
+  oColor.rgb = (sample.rgb * Exposure) / (key + 0.00001); // petite constante pour éviter la div 0
+
+  oColor.a = sample.a;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

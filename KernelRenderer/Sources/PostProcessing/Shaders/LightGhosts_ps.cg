@@ -1,0 +1,51 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define Octave1	texture0
+#define Octave2	texture1
+#define Mask	texture2
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2     TexCoordColor1   : TEXCOORD0,	  
+		   float2     TexCoordMask1    : TEXCOORD1,
+		   float2     TexCoordColor2   : TEXCOORD2,
+		   float2     TexCoordMask2    : TEXCOORD3,
+
+           uniform samplerRECT  Octave1  : register (s0),  
+           uniform samplerRECT  Octave2  : register (s1),  
+           uniform sampler2D    Mask     : register (s2), 
+
+           out float4           oColor      : COLOR)		  // Final fragment color
+{
+	float4 octave1 = texRECT(Octave1, TexCoordColor1) * tex2D(Mask, TexCoordMask1);
+	float4 octave2 = texRECT(Octave1, TexCoordColor2) * tex2D(Mask, TexCoordMask2);
+
+	oColor =  octave2 + octave1;
+	oColor.a = 1.0f;
+	
+//	oColor.rgb += pow(tex2D(Mask, TexCoordMask1).r, 1000) * 0.2;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

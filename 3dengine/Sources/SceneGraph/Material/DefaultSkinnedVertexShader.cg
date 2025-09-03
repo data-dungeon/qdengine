@@ -1,0 +1,87 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	DefaultSkinnedVertexShader
+//	The DefaultSkinnedVertexShader shader implements simple skinning
+//
+//	05-11-18:	ELE - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define modelViewProj	register0
+#define blendM			register4
+#define lightDir		register64
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float4                  position : POSITION,				// Local-space position
+		   float3				   normal : NORMAL,					// Local-space normal
+           float2                  texCoord : TEXCOORD0,			// Diffuse texture coordinate
+           float4                  weight1 : TEXCOORD2,				// Blending weights
+           float4                  weight2 : TEXCOORD3,				// Blending weights
+           float4				   matrixIndex1 : TEXCOORD4,			// Matrix indices
+           float4				   matrixIndex2 : TEXCOORD5,			// Matrix indices
+
+           uniform float4x4        modelViewProj : register (c0),	// Local-to-clip matrix
+           uniform float4          blendM[60] : register (c4),		// Skinning matrix (20 3x4)
+           uniform float4		   lightDir : register (c64),
+
+           out float4              oPosition : POSITION,			// Output clip-space position
+           out float4              oColor    : COLOR0,				// Output color
+           out float2              oTexCoord : TEXCOORD0			// Output diffuse texture coordinate
+		   )
+{
+	int i;
+    float3 skinnedPosition = 0, skinnedNormal = 0;
+	
+	for (i = 0 ; i < 4 ; i++) 
+	{
+		float		index = matrixIndex1[i] * 3;
+		
+		float3x4	skinningMat = float3x4(blendM[index], blendM[index + 1], blendM[index + 2]);
+		float3		bonePosition = mul(skinningMat, position);
+
+		float3x3	skinningRot = float3x3(skinningMat[0].xyz, skinningMat[1].xyz, skinningMat[2].xyz);
+		float3		boneNormal = mul(skinningRot, normal);
+		
+		skinnedPosition += weight1[i] * bonePosition;
+		skinnedNormal   += weight1[i] * boneNormal;			
+	}
+	for (i = 0 ; i < 4 ; i++) 
+	{
+		float		index = matrixIndex2[i] * 3;
+		
+		float3x4	skinningMat = float3x4(blendM[index], blendM[index + 1], blendM[index + 2]);
+		float3		bonePosition = mul(skinningMat, position);
+
+		float3x3	skinningRot = float3x3(skinningMat[0].xyz, skinningMat[1].xyz, skinningMat[2].xyz);
+		float3		boneNormal = mul(skinningRot, normal);
+		
+		skinnedPosition += weight2[i] * bonePosition;
+		skinnedNormal   += weight2[i] * boneNormal;			
+	}
+	
+    oPosition = mul (modelViewProj, float4(skinnedPosition, 1));
+   
+    float diffuse = max(dot(float4(skinnedNormal, 1), lightDir), 0);
+    oColor = float4(1, 1, 1, 1) * diffuse;
+    
+    oTexCoord = texCoord;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

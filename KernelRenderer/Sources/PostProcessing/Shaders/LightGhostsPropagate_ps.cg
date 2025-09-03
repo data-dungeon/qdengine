@@ -1,0 +1,55 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//é
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define GhostMap	texture0
+#define Colors	    register0
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2              TexOctave1 : TEXCOORD0,
+           float2              TexOctave2 : TEXCOORD1,
+           float2              TexOctave3 : TEXCOORD2,
+           float2              TexOctave4 : TEXCOORD3,
+           float2              TexOctave5 : TEXCOORD4,
+           float2              TexOctave6 : TEXCOORD5,
+           float2              TexOctave7 : TEXCOORD6,
+           float2              TexOctave8 : TEXCOORD7,
+
+		   uniform float4      Colors[8] : register (c0), 
+           uniform samplerRECT GhostMap  : register (s0),  
+ 
+           out float4           oColor   : COLOR)		  // Final fragment color
+{
+	oColor =  texRECT(GhostMap, TexOctave1) * Colors[0];
+	oColor += texRECT(GhostMap, TexOctave2) * Colors[1];
+	oColor += texRECT(GhostMap, TexOctave3) * Colors[2];
+	oColor += texRECT(GhostMap, TexOctave4) * Colors[3];
+	oColor += texRECT(GhostMap, TexOctave5) * Colors[4];
+	oColor += texRECT(GhostMap, TexOctave6) * Colors[5];
+	oColor += texRECT(GhostMap, TexOctave7) * Colors[6];
+	oColor += texRECT(GhostMap, TexOctave8) * Colors[7];
+	oColor.a = 1.0f;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

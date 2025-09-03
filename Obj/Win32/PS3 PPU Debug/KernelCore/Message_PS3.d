@@ -1,0 +1,29 @@
+../Obj/Win32/PS3PPU~1/KERNEL~3/Message_PS3.obj:  \
+ d:/Incoming/envoiSony/kernelcore/Sources/Core/Message_PS3.cpp \
+  d:/Incoming/envoiSony/kernelcore/Sources/Core/Root.h \
+  d:/Incoming/envoiSony/kernelcore/Sources/Core/../Root.h \
+  d:/Incoming/envoiSony/kernelcore/Sources/Core/../../../Root.h \
+  ../KernelCore/Sources/Mem/MemConfig.h \
+  ../KernelCore/Sources/Core/NewDelete.h \
+  ../KernelCore/Sources/Core/Types.h ../KernelCore/Sources/Core/Macros.h \
+  ../KernelCore/Sources/Core/Assert.h \
+  ../KernelCore/Sources/Core/Constants.h \
+  ../KernelCore/Sources/Core/Message.h \
+  ../KernelCore/Sources/Mem/MemInterface.h \
+  ../KernelCore/Sources/Mem/MemLibIdInterface.h \
+  ../KernelCore/Sources/Mem/MemLibId.h \
+  ../KernelCore/Sources/Mem/MemConfigInterface.h \
+  ../KernelCore/Sources/Mem/Mem.h \
+  d:/Incoming/envoiSony/kernelcore/Sources/Core/Message.h \
+  ../KernelCore/Sources/IceError/ErrorManager.h \
+  ../KernelCore/Sources/Tools/QDT_List.h \
+  ../KernelCore/Sources/TextDataFile/TextDataFileABC.h \
+  ../KernelCore/Sources/Tools/QdtString.h \
+  ../KernelCore/Sources/Template/QDT_DList.h \
+  ../KernelCore/Sources/Template/QDT_DLIST.inl \
+  ../KernelCore/Sources/IceError/KCoreError.h \
+  ../KernelCore/Sources/IceError/IceTextError.h \
+  ../KernelCore/Sources/IceError/IceErrorABC.h \
+  ../KernelCore/Sources/IceError/KCoreErrorModule.h \
+  ../KernelCore/Sources/IceError/ErrorModuleABC.h \
+  ../KernelCore/Sources/Includes/Includes.h

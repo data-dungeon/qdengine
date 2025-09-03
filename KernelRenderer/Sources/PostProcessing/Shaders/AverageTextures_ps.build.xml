@@ -1,0 +1,5 @@
+<targets>
+	<target name="AverageTextures_ps_2"/>
+	<target name="AverageTextures_ps_4"	 options="INPUTS4"/>
+	<target name="AverageTextures_ps_6"	 options="INPUTS4;INPUTS6"/>
+</targets>

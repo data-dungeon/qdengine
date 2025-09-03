@@ -1,0 +1,215 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	   texture0
+#define blurredMap	   texture1
+#define bloomMap	   texture2
+#define ghostsMap	   texture3
+#define starsMap       texture4
+#define bleedReduction texture5
+
+#define offsets     register0  // 8 x half2 offset
+
+#define UVHighToLow register4  
+#define FocalSetup  register6
+
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+
+#ifdef DOF
+half  FocusFromDepth(half value, half4 FocalSetup)
+{
+	return saturate(abs(value - FocalSetup.x) * FocalSetup.y - FocalSetup.z);
+}
+
+half4 Accumulates(half2 texCoord,
+				  samplerRECT  diffuseMap,
+				  samplerRECT  blurredMap,
+				  half refDepth,
+				  half2 UVScaleLow,
+				  half4 focalSetup)				 
+{
+	half4 hiresSample = texRECT(diffuseMap, texCoord);
+	half4 blurSample = texRECT(blurredMap, texCoord * UVScaleLow.xy);
+
+	half focus = min(FocusFromDepth(hiresSample.a, focalSetup) + focalSetup.w, 1.0);
+
+	half4 result;
+	
+	half ratio = (hiresSample.a >= refDepth) ? 1.0 : saturate(abs(hiresSample.a * 2.0 - 1.0));
+
+	result.rgb = lerp(hiresSample.rgb, blurSample.rgb, focus) * ratio;
+	result.a   = ratio;
+	return result;
+}
+
+half3 AccumulatesCheap(half2 texCoord,
+						samplerRECT  diffuseMap,
+						samplerRECT  blurredMap,
+						half2 UVScaleLow,
+						half4 focalSetup)				 
+{
+	half4 hiresSample = texRECT(diffuseMap, texCoord);
+	half4 blurSample = texRECT(blurredMap, texCoord * UVScaleLow.xy);
+	half focus = FocusFromDepth(hiresSample.a, focalSetup);
+    return lerp(hiresSample.rgb, blurSample.rgb, min(focus + focalSetup.w, 1.0));
+}
+
+
+#endif
+
+
+
+void main (half2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+ 
+		   uniform samplerRECT  diffuseMap  : register (s0),  // Normal LDR Image
+
+#ifdef DOF
+		   uniform samplerRECT  blurredMap  : register (s1),  // Blurred version for DOF
+
+           uniform half2        offsets     : register (c0),   // 4 x half2 offset
+
+           uniform half4        FocalSetup  : register (c6),   // [focalDist, focalX, focalB, focalC]
+#endif
+
+#ifdef DOF_DEBUG
+           uniform half4       FocalSetup  : register (c6),   // [focalDist, focalX, focalB, focalC]
+#endif
+
+
+
+#ifdef BLOOM
+		   uniform samplerRECT  bloomMap    : register (s2),  // Bloomed bright pass
+#endif
+
+
+#ifdef STARS
+		   uniform samplerRECT  starsMap   : register (s4),  // Stars
+#endif
+
+   		   uniform half2     UVHighToLow   : register (c4),
+
+           out half4         oColor      : COLOR)			// Final fragment color
+{
+
+
+
+
+  half4 cOut;
+
+#ifdef DOF
+
+  half4 refSample = texRECT(diffuseMap, texCoord);
+  half  refDepth	= refSample.a;
+  half	kernelScale = FocusFromDepth(refDepth, FocalSetup);
+  
+  
+  /* //********* Cheap and dirty way  **********
+  half4 blurSample = texRECT(blurredMap, texCoord * UVHighToLow.xy);
+  cOut.rgb = lerp(refSample.rgb, blurSample.rgb, clamp(kernelScale + FocalSetup.w, 0, 1));
+  */
+  
+	//********* Alternative way  **********
+   half4 blurSample = texRECT(blurredMap, texCoord * UVHighToLow.xy);
+   half2 rad = offsets * kernelScale;
+   refSample += texRECT(diffuseMap, texCoord + half2(rad.x, 0));
+   refSample += texRECT(diffuseMap, texCoord - half2(rad.x, 0));
+   refSample += texRECT(diffuseMap, texCoord + half2(0, rad.y));
+   refSample += texRECT(diffuseMap, texCoord - half2(0, rad.y));
+   refSample /= 5.0f;
+   cOut.rgb  = lerp(refSample.rgb, blurSample.rgb, clamp(kernelScale + FocalSetup.w, 0, 1));
+
+  /*
+  //********** Expensive way ********** 
+  if (kernelScale < 0.01)
+  {
+  	cOut.rgb = lerp(refSample.rgb, texRECT(blurredMap, texCoord * UVHighToLow.xy).rgb, FocalSetup.w);
+  }
+  else if (kernelScale > 0.99)
+  {
+  	cOut.rgb = texRECT(blurredMap, texCoord * UVHighToLow.xy);
+  }
+  else
+  {
+    half2 rad = offsets * kernelScale;
+	cOut =  Accumulates(texCoord , diffuseMap, blurredMap, refDepth, UVHighToLow, FocalSetup);
+	cOut += Accumulates(texCoord + half2(rad.x, 0), diffuseMap, blurredMap, refDepth, UVHighToLow, FocalSetup);
+	cOut += Accumulates(texCoord - half2(rad.x, 0), diffuseMap, blurredMap, refDepth, UVHighToLow, FocalSetup);
+	cOut += Accumulates(texCoord + half2(0, rad.y), diffuseMap, blurredMap, refDepth, UVHighToLow, FocalSetup);
+	cOut += Accumulates(texCoord - half2(0, rad.y), diffuseMap, blurredMap, refDepth, UVHighToLow, FocalSetup);
+	cOut.rgb = (cOut.rgb / cOut.a);
+  }
+	*/
+
+#else
+
+  cOut = texRECT(diffuseMap, texCoord);
+
+#endif // DOF
+
+
+  half2 lowtex = texCoord * UVHighToLow.xy;
+  oColor.rgb = cOut.rgb;
+  
+#ifdef BLOOM
+  oColor.rgb += texRECT(bloomMap, lowtex).rgb; 
+#endif
+
+#ifdef STARS
+  oColor.rgb += texRECT(starsMap, lowtex).rgb; 
+#endif
+
+
+#ifdef DOF_DEBUG
+
+  half4 debugSample = texRECT(diffuseMap, texCoord);
+  half  debugDepth	= debugSample.a;
+  float dbgBlur = abs(debugDepth - FocalSetup.x) * FocalSetup.y - FocalSetup.z;
+
+  half3 dbgColor;
+
+  half factor = saturate(dbgBlur);
+
+  float3 blurColor = float3(1, 1, 0.3);
+  float3 clearColor = float3(0.3, 0.3, 1.0);
+
+  if (debugDepth >= 0.999)
+	  dbgColor = float3(1, 0, 0);
+  else
+  {
+	  dbgColor = lerp(clearColor, blurColor, factor);
+
+	  if (dbgBlur < 0.003)
+		  dbgColor = float3(0.1, 0.1, 1.0);
+  }
+	
+  oColor.rgb = dbgColor * 0.7 + (debugSample.rgb * 0.3);
+#endif
+
+
+  oColor.a = 1.0f;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

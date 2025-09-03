@@ -1,0 +1,10 @@
+<targets>
+	<target name="ViewportCompositing"       profile="ps_1_3"/>
+	<target name="ViewportCompositing_N"	 options="NOISE"/>
+	<target name="ViewportCompositing_M"	 options="MASK" profile="ps_1_3"/>
+	<target name="ViewportCompositing_NM"	 options="NOISE;MASK"/>
+	<target name="ViewportCompositing_C"	 options="COLORCONTROL"/>
+	<target name="ViewportCompositing_NC"	 options="NOISE;COLORCONTROL"/>
+	<target name="ViewportCompositing_MC"	 options="MASK;COLORCONTROL"/>
+	<target name="ViewportCompositing_NMC"	 options="NOISE;MASK;COLORCONTROL"/>
+</targets>

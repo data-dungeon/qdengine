@@ -1,0 +1,55 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+
+#define offsets   register0  // 8 x Float2 offset
+
+#define wheights  register4  // 8 x Float4 wheigt
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+           uniform samplerRECT  diffuseMap  : register (s0),  // Diffuse texture map
+
+           uniform float4     offsets[4]    : register (c0),   // 8 x Float2 offset
+
+		   uniform float4     wheights[8]   : register (c4),  // 8 x Float4 wheigt
+
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+	oColor =  texRECT(diffuseMap, texCoord + offsets[0].xy) * wheights[0];
+	oColor += texRECT(diffuseMap, texCoord + offsets[0].zw) * wheights[1];
+	oColor += texRECT(diffuseMap, texCoord + offsets[1].xy) * wheights[2];
+	oColor += texRECT(diffuseMap, texCoord + offsets[1].zw) * wheights[3];
+	oColor += texRECT(diffuseMap, texCoord + offsets[2].xy) * wheights[4];
+	oColor += texRECT(diffuseMap, texCoord + offsets[2].zw) * wheights[5];
+	oColor += texRECT(diffuseMap, texCoord + offsets[3].xy) * wheights[6];
+	oColor += texRECT(diffuseMap, texCoord + offsets[3].zw) * wheights[7];
+
+//	oColor = texRECT(diffuseMap, texCoord);
+//	oColor = float4(1,0,1,1);
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

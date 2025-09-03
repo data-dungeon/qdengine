@@ -1,0 +1,13 @@
+<targets>
+
+	<target name="LightCompositing"/>
+	<target name="LightCompositing_STARS"				    options="STARS"				/>
+	<target name="LightCompositing_BLOOM"				    options="BLOOM"				/>
+	<target name="LightCompositing_BLOOM_STARS"			    options="BLOOM;STARS"		/>
+	<target name="LightCompositing_DOF"					    options="DOF"				/>	
+	<target name="LightCompositing_DOF_STARS"			    options="DOF;STARS"			/>
+	<target name="LightCompositing_DOF_BLOOM"			    options="DOF;BLOOM"			/>
+	<target name="LightCompositing_DOF_BLOOM_STARS"		    options="DOF;BLOOM;STARS"	/>
+	<target name="LightCompositing_DEBUG"					options="DOF_DEBUG"         />
+	<target name="perf_build"							    options="DOF"				/>	
+</targets>

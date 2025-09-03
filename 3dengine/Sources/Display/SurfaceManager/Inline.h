@@ -1,0 +1,38 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	File	:	Inline.h
+//	Category:	3DEngine\Sources\Display\SurfaceManager
+//
+//	01-07-16:	ONA - Created
+//*****************************************************************************
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+#include	"DualEdge/DualEdge.inl"
+#include	"Edge/Edge.inl"
+#include	"EdgeStripInfo/EdgeStripInfo.inl"
+#include	"StorageGroup/StorageGroup.inl"
+#include	"SurfaceRec/SurfaceRec.inl"
+#include	"SurfaceManager.inl"
+
+#ifdef _DISPLAY_TRACE_FACADE_INCLUDE_
+	#pragma QDT_TRACE_FACADE_INCLUDE()
+#endif	//	_DISPLAY_TRACE_FACADE_INCLUDE_
+
+//=============================================================================
+// CODE ENDS HERE
+//=============================================================================

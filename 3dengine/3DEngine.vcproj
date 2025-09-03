@@ -1,0 +1,4908 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="3DEngine"
+	ProjectGUID="{F40886A9-3E27-4CDC-A30C-A9B944E509AE}"
+	SccProjectName="RD/QDT 3_5 PC/3dengine"
+	SccAuxPath=""
+	SccLocalPath="."
+	SccProvider="MSSCCI:Perforce SCM">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Win32 Release|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2"
+			WholeProgramOptimization="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				GlobalOptimizations="TRUE"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="TRUE"
+				ImproveFloatingPointConsistency="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				EnableFiberSafeOptimizations="TRUE"
+				OptimizeForProcessor="2"
+				OptimizeForWindowsApplication="TRUE"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include"
+				PreprocessorDefinitions="_LIB;PLATFORM_PC;__NEW_ANIM__;NDEBUG;WIN32;QDT_INCLUDE_CI;__RENDERMANAGER__;__NEW_KERNEL__;_AFX_NO_DEBUG_CRT"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderThrough=""
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="FALSE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"
+				CallingConvention="0"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32 Debug|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				OptimizeForProcessor="2"
+				AdditionalIncludeDirectories="..\..\DX9_SDK_PC\Include;..\"
+				PreprocessorDefinitions="_DEBUG;_LIB;PLATFORM_PC;__NEW_ANIM__;WIN32;QDT_INCLUDE_CI;__RENDERMANAGER__;__NEW_KERNEL__"
+				BasicRuntimeChecks="0"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderThrough=""
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="FALSE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				AdditionalLibraryDirectories=""
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32 FastDebug|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2"
+			WholeProgramOptimization="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				GlobalOptimizations="FALSE"
+				InlineFunctionExpansion="0"
+				EnableIntrinsicFunctions="FALSE"
+				ImproveFloatingPointConsistency="FALSE"
+				FavorSizeOrSpeed="0"
+				OmitFramePointers="FALSE"
+				EnableFiberSafeOptimizations="FALSE"
+				OptimizeForProcessor="2"
+				OptimizeForWindowsApplication="FALSE"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include"
+				PreprocessorDefinitions="QDT_DEBUG;_LIB;PLATFORM_PC;NDEBUG;WIN32;QDT_INCLUDE_CI;__NEW_ANIM__;__RENDERMANAGER__;__NEW_KERNEL__;_AFX_NO_DEBUG_CRT;TEST_VHA"
+				StringPooling="FALSE"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="2"
+				BufferSecurityCheck="FALSE"
+				EnableFunctionLevelLinking="FALSE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderThrough=" "
+				PrecompiledHeaderFile=" "
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="FALSE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"
+				CallingConvention="0"
+				CompileAs="0"
+				DisableSpecificWarnings=" "
+				ForcedIncludeFiles=" "
+				ForcedUsingFiles=" "
+				UndefinePreprocessorDefinitions=" "/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32 Master|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2"
+			WholeProgramOptimization="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				GlobalOptimizations="TRUE"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="TRUE"
+				ImproveFloatingPointConsistency="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				EnableFiberSafeOptimizations="TRUE"
+				OptimizeForProcessor="2"
+				OptimizeForWindowsApplication="TRUE"
+				AdditionalIncludeDirectories="..\..\DX9_SDK_PC\Include;..\"
+				PreprocessorDefinitions="_LIB;PLATFORM_PC;__NEW_ANIM__;NDEBUG;WIN32;QDT_INCLUDE_CI;__RENDERMANAGER__;__NEW_KERNEL__;_AFX_NO_DEBUG_CRT;_MASTER"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderThrough=""
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="FALSE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"
+				CallingConvention="0"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="PS3 PPU Debug|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			DeleteExtensionsOnClean="*.obj;*.d;*.map;*.lst;*.pch;$(TargetPath)">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="-g -fno-exceptions -fno-rtti -fsigned-char"
+				Optimization="0"
+				AdditionalIncludeDirectories="&quot;..&quot;;&quot;$(SN_PS3_PATH)\include&quot;;&quot;$(SCE_PS3_ROOT)\target-ceb\ppu\include&quot;"
+				PreprocessorDefinitions="_DEBUG;QDT_DEBUG;_LIB;SN_TARGET_PS3;PLATFORM_PS3;__GCC__;__NEW_ANIM__;__RENDERMANAGER__;__NEW_KERNEL__"
+				ProgramDataBaseFileName="$(IntDir)/"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalDependencies=""
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="PS3 PPU Release|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			DeleteExtensionsOnClean="*.obj;*.d;*.map;*.lst;*.pch;$(TargetPath)">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="-g -w -fno-exceptions -O2 -fno-rtti -fsigned-char"
+				AdditionalIncludeDirectories="&quot;..&quot;;&quot;$(SN_PS3_PATH)\include&quot;;&quot;$(SCE_PS3_ROOT)\target-ceb\ppu\include&quot;"
+				PreprocessorDefinitions="_LIB;SN_TARGET_PS3;PLATFORM_PS3;__GCC__"
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName="$(IntDir)/"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				AdditionalDependencies=""
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Win32_Profile|Win32"
+			OutputDirectory=".\..\Output\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(ProjectName)"
+			ConfigurationType="4"
+			UseOfMFC="2"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2"
+			WholeProgramOptimization="FALSE">
+			<Tool
+				Name="VCCLCompilerTool"
+				GlobalOptimizations="TRUE"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="TRUE"
+				ImproveFloatingPointConsistency="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				EnableFiberSafeOptimizations="TRUE"
+				OptimizeForProcessor="2"
+				OptimizeForWindowsApplication="TRUE"
+				AdditionalIncludeDirectories="..\;..\..\DX9_SDK_PC\Include"
+				PreprocessorDefinitions="_LIB;PLATFORM_PC;__NEW_ANIM__;NDEBUG;WIN32;QDT_INCLUDE_CI;__RENDERMANAGER__;__NEW_KERNEL__;_AFX_NO_DEBUG_CRT"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="0"
+				PrecompiledHeaderThrough=""
+				PrecompiledHeaderFile=""
+				AssemblerListingLocation=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ObjectFile=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				ProgramDataBaseFileName=".\..\Obj\$(PlatformName)\$(ConfigurationName)\$(TargetName)\"
+				WarningLevel="3"
+				WarnAsError="FALSE"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="3"
+				CallingConvention="0"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile=".\..\Output\$(PlatformName)\$(ConfigurationName)\$(ProjectName).lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath=".\Sources\Facade.h">
+			</File>
+			<File
+				RelativePath=".\Sources\Include.h">
+			</File>
+			<File
+				RelativePath="Sources\Root.h">
+			</File>
+			<Filter
+				Name="Behavior"
+				Filter="">
+				<File
+					RelativePath=".\Sources\Behavior\BehaviorManager.cpp">
+				</File>
+				<File
+					RelativePath=".\Sources\Behavior\BehaviorManager.h">
+				</File>
+				<File
+					RelativePath="Sources\Behavior\Root.h">
+				</File>
+				<Filter
+					Name="Behaviors"
+					Filter="">
+					<File
+						RelativePath="Sources\Behavior\Behaviors\Root.h">
+					</File>
+					<Filter
+						Name="CamFree Implementation"
+						Filter="">
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Node Behaviors\CamFree.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Node Behaviors\CamFree.h">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Node Behaviors\CamFreeStruct.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Node Behaviors\CamFreeStruct.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Behaviors\Node Behaviors\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Entity Behaviors (Blend shapes only?)"
+						Filter="">
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\EntityBehaviorABC.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\EntityBehaviorABC.h">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\EntityBehaviorFactory.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\EntityBehaviorFactory.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Behaviors\Entity Behaviors\Root.h">
+						</File>
+						<Filter
+							Name="BlendShape"
+							Filter="">
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapeAnimation.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapeAnimation.h">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapeBlink.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapeBlink.h">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapeInterpolation.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapeInterpolation.h">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapePeriodicBlink.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\BlendShapePeriodicBlink.h">
+							</File>
+							<File
+								RelativePath="Sources\Behavior\Behaviors\Entity Behaviors\BlendShape\Root.h">
+							</File>
+						</Filter>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="Controllers"
+					Filter="">
+					<File
+						RelativePath="Sources\Behavior\Controllers\Root.h">
+					</File>
+					<Filter
+						Name="Entity Controllers"
+						Filter="">
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Entity Controllers\BlendShapeController.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Entity Controllers\BlendShapeController.h">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Entity Controllers\EntityControllerABC.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Entity Controllers\EntityControllerABC.h">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Entity Controllers\EntityControllerFactory.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Entity Controllers\EntityControllerFactory.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Controllers\Entity Controllers\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Container"
+						Filter="">
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Container\Container.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Container\Container.h">
+						</File>
+						<File
+							RelativePath=".\Sources\Behavior\Controllers\Container\Container.inl">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Controllers\Container\Root.h">
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="Datas"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Behavior\Datas\AnimPC.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\AnimPc.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\ColorAnimData.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\ColorAnimData.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\GenericKey.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\GenericTrack.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\NumericAnimData.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\NumericAnimData.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\TextureAnimData.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\Datas\TextureAnimData.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\TopAnim.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\TrackData.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\TrackData.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\TrackData.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\TrackIndexes.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\Datas\TrackIndexes.h">
+					</File>
+					<Filter
+						Name="StreamedAnimation"
+						Filter="">
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\AnimBlock.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\AnimBlock.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\AnimBlock.inl">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\Root.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamableAnimWriter.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamableAnimWriter.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamAnimation.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamAnimation.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamAnimation.inl">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamAnimationOffset.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamAnimationOffset.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamTrack.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamTrack.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamTrack.inl">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamTrackHeader.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamTrackHeader.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamedAnimation\StreamTrackHeader.inl">
+						</File>
+					</Filter>
+					<Filter
+						Name="StreamableBlendShapeAnim"
+						Filter="">
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\BlendShapeAnimBlock.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\BlendShapeAnimBlock.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\Root.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnim.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnim.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnimOffset.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnimOffset.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnimWrapper.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnimWrapper.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnimWriter.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamableBlendShapeAnimWriter.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamHandleBlendShapeAnim.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\StreamableBlendShapeAnim\StreamHandleBlendShapeAnim.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="BlendShapeAnim"
+						Filter="">
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\BlendShapeAnimWrapper.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\BlendShapeAnimWrapper.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\BlendShapeAnimWrapperABC.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\BlendShapeAnimWrapperABC.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\BlendShapePC.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\BlendShapePc.h">
+						</File>
+						<File
+							RelativePath="Sources\Behavior\Datas\BlendShapeAnim\Root.h">
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="AnimWrapper"
+					Filter="">
+					<File
+						RelativePath="Sources\Behavior\AnimWrapper\IAnimWrapper.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimWrapper\ITrackWrapper.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="AnimNode"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimLink.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimLink.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimLink.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimNode.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimNode.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimNode.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimNodeStruct.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimNodeStruct.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimNodeStruct.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimStatus.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimStatus.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\AnimStatus.inl">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimNode\Root.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\ScaleAttr.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\ScaleAttr.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimNode\ScaleAttr.inl">
+					</File>
+				</Filter>
+				<Filter
+					Name="HipsAnim"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\AnimPcWrapper.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\AnimPcWrapper.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\HipsAnim.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\HipsAnim.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\HipsAnimStruct.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\HipsAnimStruct.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\HipsAnim\HipsAnimStruct.inl">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HipsAnim\Root.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="TrackAnim"
+					Filter="">
+					<File
+						RelativePath="Sources\Behavior\TrackAnim\Root.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TrackAnim\TrackDataWrapper.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TrackAnim\TrackDataWrapper.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="TargetAnim"
+					Filter="">
+					<File
+						RelativePath="Sources\Behavior\TargetAnim\Root.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TargetAnim\TargetAnim.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TargetAnim\TargetAnim.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TargetAnim\TargetAnim.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TargetAnim\TargetAnimStruct.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TargetAnim\TargetAnimStruct.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\TargetAnim\TargetAnimStruct.inl">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\TargetAnim\TargetTrack.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\TargetAnim\TargetTrack.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="AnimGeometry"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Behavior\AnimGeometry\BiQuatVect.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimGeometry\BiQuatVect.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\StrAnim.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\StrAnim.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\StrAnim.inl">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\StrAnimBase.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\StrAnimBase.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimGeometry\StrAnimBase.inl">
+					</File>
+				</Filter>
+				<Filter
+					Name="AnimTimer"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Behavior\AnimTimer\BaseTimerAttr.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimTimer\BaseTimerAttr.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Behavior\AnimTimer\BaseTimerAttr.inl">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimTimer\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimTimer\TimeAttrEx.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimTimer\TimeAttrEx.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\AnimTimer\TimeAttrEx.inl">
+					</File>
+				</Filter>
+				<Filter
+					Name="HandleStreamAnim"
+					Filter="">
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\HandleStreamAnim.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\HandleStreamAnim.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\StreamAnimWrapper.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\StreamAnimWrapper.h">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\StreamTrackWrapper.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Behavior\HandleStreamAnim\StreamTrackWrapper.h">
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="M3D"
+				Filter="">
+				<File
+					RelativePath=".\Sources\M3D\Moteur3D.cpp">
+				</File>
+				<File
+					RelativePath=".\Sources\M3D\Moteur3D.h">
+				</File>
+				<File
+					RelativePath=".\Sources\M3D\Moteur3D.inl">
+				</File>
+				<File
+					RelativePath=".\Sources\M3D\Moteur3DModule.cpp">
+				</File>
+				<File
+					RelativePath=".\Sources\M3D\Moteur3DModule.h">
+				</File>
+				<File
+					RelativePath="Sources\M3D\Root.h">
+				</File>
+			</Filter>
+			<Filter
+				Name="SceneGraph"
+				Filter="">
+				<File
+					RelativePath="Sources\SceneGraph\Root.h">
+				</File>
+				<Filter
+					Name="Entities"
+					Filter="">
+					<File
+						RelativePath=".\Sources\SceneGraph\Entities\EntityABC.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Entities\EntityABC.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Entities\EntityABC.inl">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Entities\Root.h">
+					</File>
+					<Filter
+						Name="Camera"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Camera\Camera.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Camera\Camera.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Camera\Camera.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Camera\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="ForceFields"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\ForceFields\ForceFieldABC.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\ForceFields\ForceFieldABC.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\ForceFields\ForceFieldABC.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\ForceFields\Root.h">
+						</File>
+						<Filter
+							Name="UniformField"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\UniformField\Root.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\UniformField\UniformField.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\UniformField\UniformField.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="RadialField"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\RadialField\RadialField.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\RadialField\RadialField.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\RadialField\Root.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="VortexField"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\VortexField\Root.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\VortexField\VortexField.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\VortexField\VortexField.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="LifeField"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\LifeField\LifeField.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\LifeField\LifeField.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\ForceFields\LifeField\LifeField.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\LifeField\Root.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="PerturbationField"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\PerturbationField\PerturbationField.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\PerturbationField\PerturbationField.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\ForceFields\PerturbationField\Root.h">
+							</File>
+						</Filter>
+					</Filter>
+					<Filter
+						Name="Group"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Group\Group.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Group\Group.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Group\Group.inl">
+						</File>
+					</Filter>
+					<Filter
+						Name="Joint"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Joint\Joint.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Joint\Joint.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Joint\Joint.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Joint\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Light"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Light\LightABC.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Light\LightABC.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Light\Root.h">
+						</File>
+						<Filter
+							Name="Directional"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\DirectionalLight.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\DirectionalLight.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="Point"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\PointLight.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\PointLight.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\PointLight.inl">
+							</File>
+						</Filter>
+						<Filter
+							Name="Spot"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\SpotLight.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Light\SpotLight.h">
+							</File>
+						</Filter>
+					</Filter>
+					<Filter
+						Name="Mesh"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\FacesToSort.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\FacesToSort.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Flow.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Flow.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\FlowData.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCLCompilerTool"
+									ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\FlowData.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Mesh.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Mesh.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Mesh.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\MeshData.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\MeshData.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\MeshData.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Primitive.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Primitive.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Primitive.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\RadixSort.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\RadixSort.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Mesh\Root.h">
+						</File>
+						<Filter
+							Name="BlendShape"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\BlendShape\BlendShape.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\BlendShape\BlendShape.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\BlendShape\BlendShape.inl">
+							</File>
+						</Filter>
+						<Filter
+							Name="SoftBody"
+							Filter="*.cpp;*.h;*.inl">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\Declaration.h">
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\Facade.h">
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\Include.h">
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\ParticleExchanger.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\ParticleExchanger.h">
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\SoftBody.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Mesh\SoftBody\SoftBody.h">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCustomBuildTool"/>
+								</FileConfiguration>
+							</File>
+						</Filter>
+						<Filter
+							Name="PhysicData"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\DynamicPhysicData.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\DynamicPhysicData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\DynamicPhysicData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeBoxData.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeBoxData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeBoxData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeCapsuleData.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeCapsuleData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeCapsuleData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeData.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeSphereData.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeSphereData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeSphereData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeTriangleData.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeTriangleData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\PhysicShapeTriangleData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\Root.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\StaticPhysicData.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32">
+									<Tool
+										Name="VCCLCompilerTool"
+										ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\StaticPhysicData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\PhysicData\StaticPhysicData.inl">
+							</File>
+						</Filter>
+						<Filter
+							Name="Shaders"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\Shaders\Flow_vs.cg">
+								<FileConfiguration
+									Name="Win32 Release|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\Shaders\FlowDrop_ps.cg">
+								<FileConfiguration
+									Name="Win32 Release|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Mesh\Shaders\FlowQuad_ps.cg">
+								<FileConfiguration
+									Name="Win32 Release|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32">
+									<Tool
+										Name="VCCustomBuildTool"
+										CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_1
+"
+										Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+								</FileConfiguration>
+							</File>
+						</Filter>
+					</Filter>
+					<Filter
+						Name="Portal"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Portal\Facade.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Portal\Include.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Portal\Inline.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Portal\PortalABC.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Portal\PortalABC.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Portal\PortalABC.inl">
+						</File>
+						<Filter
+							Name="MirrorPortal"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Portal\MirrorPortal\MirrorPortal.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Portal\MirrorPortal\MirrorPortal.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Portal\MirrorPortal\MirrorPortal.inl">
+							</File>
+						</Filter>
+						<Filter
+							Name="TwinPortal"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Portal\TwinPortal\TwinPortal.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Portal\TwinPortal\TwinPortal.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Portal\TwinPortal\TwinPortal.inl">
+							</File>
+						</Filter>
+					</Filter>
+					<Filter
+						Name="Trigger"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Trigger\Root.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Trigger\Trigger.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Trigger\Trigger.h">
+						</File>
+						<Filter
+							Name="Zone"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Zone\Declaration.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Zone\Facade.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Zone\Include.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Zone\Inline.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Zone\Zone.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Zone\Zone.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Zone\Zone.inl">
+							</File>
+						</Filter>
+					</Filter>
+					<Filter
+						Name="Particles"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleEmitter.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleEmitter.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleEmitter.inl">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleShape.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleShape.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleShape.inl">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleShapeSprite.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleShapeSprite.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleShapeSprite.inl">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleSystem.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleSystem.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Particles\ParticleSystem.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Particles\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="QdTransform"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\QDTransform\QdTransform.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\QDTransform\QdTransform.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\QDTransform\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Glow"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Glow\Glow.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Glow\Glow.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Glow\Glow.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Glow\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Interface3D"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Interface3D\Interface3D.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Interface3D\Interface3D.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Interface3D\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="PrimitiveSet"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\PrimitiveSet\PrimitiveSet.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\PrimitiveSet\PrimitiveSet.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\PrimitiveSet\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Waypoint"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\WayPoint\Root.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\WayPoint\WayPoint.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\WayPoint\WayPoint.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\WayPoint\WayPointLink.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\WayPoint\WayPointLink.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="MeshGroup"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\AABB_Tree.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\AABB_Tree.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\AABB_TreeCell.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\AABB_TreeCell.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\AABB_TreeCellCompressed.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\AABB_TreeCellCompressed.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\MeshGroup.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\MeshGroup.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\MeshGroup.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\MeshGroupGeometry.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\MeshGroupGeometry.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\MeshGroupGeometry.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\MeshGroup\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="CollisionMesh"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CM_Edge.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CM_Edge.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CM_Face.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CM_Face.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CM_Sector.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CM_Sector.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CollisionMesh.cpp">
+							<FileConfiguration
+								Name="Win32 Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32"
+								ExcludedFromBuild="TRUE">
+								<Tool
+									Name="VCCLCompilerTool"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\CollisionMesh.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\CollisionMesh\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="Skeleton"
+						Filter="">
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Skeleton\skeleton.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Skeleton\Skeleton.h">
+						</File>
+						<File
+							RelativePath=".\Sources\SceneGraph\Entities\Skeleton\Skeleton.inl">
+						</File>
+						<Filter
+							Name="Bone"
+							Filter="">
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Skeleton\Bone\Bone.cpp">
+								<FileConfiguration
+									Name="Win32 Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 FastDebug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32 Master|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Debug|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="PS3 PPU Release|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+								<FileConfiguration
+									Name="Win32_Profile|Win32"
+									ExcludedFromBuild="TRUE">
+									<Tool
+										Name="VCCLCompilerTool"/>
+								</FileConfiguration>
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Skeleton\Bone\bone.h">
+							</File>
+							<File
+								RelativePath=".\Sources\SceneGraph\Entities\Skeleton\Bone\Bone.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Bone\Root.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="Hair"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\Hair.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\Hair.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\Hair.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\HairCell.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\HairCell.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\HairCell.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Hair\Root.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="Ragdoll"
+							Filter="">
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollActor.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollActor.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollActor.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollConstraint.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollConstraint.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollConstraint.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollData.cpp">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollData.h">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\RagdollData.inl">
+							</File>
+							<File
+								RelativePath="Sources\SceneGraph\Entities\Skeleton\Ragdoll\Root.h">
+							</File>
+						</Filter>
+					</Filter>
+					<Filter
+						Name="Constraint"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\Constraint.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\Constraint.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\Constraint.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\ConstraintData.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\ConstraintData.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\ConstraintData.inl">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\Constraint\Root.h">
+						</File>
+					</Filter>
+					<Filter
+						Name="AmbientOctree"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Entities\AmbientOctree\AmbientOctree.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\AmbientOctree\AmbientOctree.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Entities\AmbientOctree\Root.h">
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="Node"
+					Filter="">
+					<File
+						RelativePath=".\Sources\SceneGraph\Node\Node.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Node\Node.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Node\Node.inl">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeArray.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeArray.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeArray.inl">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeChild.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeChild.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeChild.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Node\NodeManager.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Node\NodeManager.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeMapper.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\NodeMapper.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Node\Root.h">
+					</File>
+					<Filter
+						Name="ShadowObject"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Node\ShadowObject\Root.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Node\ShadowObject\ShadowObject.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Node\ShadowObject\ShadowObject.h">
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="Material"
+					Filter="">
+					<File
+						RelativePath="Sources\SceneGraph\Material\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderABC.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderABC.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderColorPerVertex.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderColorPerVertex.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderContainer.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderContainer.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderCustom.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderCustom.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderDefault.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderDefault.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderError.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderError.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderShadow.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Material\ShaderShadow.h">
+					</File>
+					<Filter
+						Name="Shaders"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Material\ColorPerVertexPixelShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ColorPerVertexSkinnedVertexShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ColorPerVertexVertexShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\DefaultPixelShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -ps -profile ps_1_0
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\DefaultSkinnedVertexShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\DefaultVertexShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot;  -vs -profile vs_1_1
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ErrorPixelShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ErrorSkinnedVertexShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ErrorVertexShader.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									Description="Build &quot;$(InputName)&quot;"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ShaderShadowPS_HardwareSpot.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ShaderShadowPS_Spot.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -ps
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ShaderShadowSkinnedVS_HardwareSpot.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ShaderShadowSkinnedVS_Spot.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ShaderShadowVS_HardwareSpot.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Material\ShaderShadowVS_Spot.cg">
+							<FileConfiguration
+								Name="Win32 Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 FastDebug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32 Master|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Debug|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="PS3 PPU Release|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+							<FileConfiguration
+								Name="Win32_Profile|Win32">
+								<Tool
+									Name="VCCustomBuildTool"
+									CommandLine="&quot;$(SolutionDir)..\TOOLS BIN\BinRenderer\ShaderInliner&quot; &quot;$(InputPath)&quot; -vs
+"
+									Outputs="&quot;$(InputDir)$(InputName).h&quot;"/>
+							</FileConfiguration>
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="RayCaster"
+					Filter="">
+					<File
+						RelativePath=".\Sources\SceneGraph\RayCaster\RayCaster.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\RayCaster\RayCaster.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\RayCaster\RayCaster.inl">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\RayCaster\RayCastParameters.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\RayCaster\RayCastParameters.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\RayCaster\RayCastParameters.inl">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\RayCaster\Root.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="Blocs"
+					Filter="">
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\Bloc.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\Bloc.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\Bloc.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocCat.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocCat.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocCat.inl">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocReadEntity.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocReadEntity.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocReadTask.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\BlocReadTask.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\Facade.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\Include.h">
+					</File>
+					<File
+						RelativePath=".\Sources\SceneGraph\Blocs\Inline.h">
+					</File>
+					<Filter
+						Name="Joints"
+						Filter="">
+						<File
+							RelativePath="Sources\SceneGraph\Joints\PhysicJoint.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Joints\PhysicJoint.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Joints\PhysicJointRevolute.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Joints\PhysicJointRevolute.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Joints\PhysicJointSpherical.cpp">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Joints\PhysicJointSpherical.h">
+						</File>
+						<File
+							RelativePath="Sources\SceneGraph\Joints\Root.h">
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="Texture"
+					Filter="">
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureABC.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureABC.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureBank.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureBank.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureFile.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureFile.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureFlow.cpp">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\EngineTextureFlow.h">
+					</File>
+					<File
+						RelativePath="Sources\SceneGraph\Texture\Root.h">
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="Interface2D3D"
+				Filter="">
+				<File
+					RelativePath=".\Sources\Interface2D3D\InterfaceManager.cpp">
+				</File>
+				<File
+					RelativePath=".\Sources\Interface2D3D\InterfaceManager.h">
+				</File>
+				<File
+					RelativePath="Sources\Interface2D3D\Root.h">
+				</File>
+				<Filter
+					Name="IHM"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Interface2D3D\IHM\IHM_ElementsList.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Interface2D3D\IHM\IHM_ElementsList.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Interface2D3D\IHM\IHM_Interface.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Interface2D3D\IHM\IHM_Interface.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Interface2D3D\IHM\IHM_Page.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Interface2D3D\IHM\IHM_Page.h">
+					</File>
+					<File
+						RelativePath="Sources\Interface2D3D\IHM\IHM_Elements\Root.h">
+					</File>
+					<Filter
+						Name="IHM_Elements"
+						Filter="">
+						<File
+							RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementABC.cpp">
+						</File>
+						<File
+							RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementABC.h">
+						</File>
+						<Filter
+							Name="IHM_ElementPoly"
+							Filter="">
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\IHM_ElementPolyABC.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\IHM_ElementPolyABC.h">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\IHM_ElementQuad.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\IHM_ElementQuad.h">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\IHM_ElementTriangle.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\IHM_ElementTriangle.h">
+							</File>
+							<File
+								RelativePath="Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementPoly\Root.h">
+							</File>
+						</Filter>
+						<Filter
+							Name="IHM_ElementRect"
+							Filter="">
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\IHM_ElementBitmap.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\IHM_ElementBitmap.h">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\IHM_ElementRect.cpp">
+							</File>
+							<File
+								RelativePath=".\Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\IHM_ElementRect.h">
+							</File>
+							<File
+								RelativePath="Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\IHM_ElementText.cpp">
+							</File>
+							<File
+								RelativePath="Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\IHM_ElementText.h">
+							</File>
+							<File
+								RelativePath="Sources\Interface2D3D\IHM\IHM_Elements\IHM_ElementRect\Root.h">
+							</File>
+						</Filter>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="DisplayFont"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Interface2D3D\DisplayFont\DisplayFont.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Interface2D3D\DisplayFont\DisplayFont.h">
+					</File>
+					<File
+						RelativePath="Sources\Interface2D3D\DisplayFont\DisplayFontDebug.h">
+					</File>
+					<File
+						RelativePath="Sources\Interface2D3D\DisplayFont\JapaneseMapping.h">
+					</File>
+					<File
+						RelativePath="Sources\Interface2D3D\DisplayFont\Root.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="SpriteBank"
+					Filter="">
+					<File
+						RelativePath="Sources\Interface2D3D\SpriteBank\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Interface2D3D\SpriteBank\SpriteBank.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Interface2D3D\SpriteBank\SpriteBank.h">
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="Physic"
+				Filter="*.cpp;*.h;*.inl">
+				<File
+					RelativePath=".\Sources\Physic\PhysicManager.cpp">
+				</File>
+				<File
+					RelativePath=".\Sources\Physic\PhysicManager.h">
+				</File>
+				<File
+					RelativePath="Sources\Physic\Root.h">
+				</File>
+				<Filter
+					Name="Cloth"
+					Filter="*.cpp;*.h;*.inl">
+					<File
+						RelativePath=".\Sources\Physic\Cloth\ClothBuilder.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\Sources\Physic\Cloth\ClothBuilder.h">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCustomBuildTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Physic\Cloth\Root.h">
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="Collision"
+				Filter="">
+				<File
+					RelativePath="Sources\Collision\CollisionEntity.cpp">
+					<FileConfiguration
+						Name="Win32 Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 FastDebug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 Master|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="PS3 PPU Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="PS3 PPU Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32_Profile|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="Sources\Collision\CollisionEntity.h">
+				</File>
+				<File
+					RelativePath="Sources\Collision\CollisionManager.cpp">
+					<FileConfiguration
+						Name="Win32 Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 FastDebug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 Master|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="PS3 PPU Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="PS3 PPU Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32_Profile|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="Sources\Collision\CollisionManager.h">
+				</File>
+				<File
+					RelativePath="Sources\Collision\CollisionNotifier.cpp">
+					<FileConfiguration
+						Name="Win32 Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 FastDebug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32 Master|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="PS3 PPU Debug|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="PS3 PPU Release|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Win32_Profile|Win32"
+						ExcludedFromBuild="TRUE">
+						<Tool
+							Name="VCCLCompilerTool"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="Sources\Collision\CollisionNotifier.h">
+				</File>
+				<File
+					RelativePath="Sources\Collision\Root.h">
+				</File>
+			</Filter>
+			<Filter
+				Name="Display"
+				Filter="">
+				<File
+					RelativePath=".\Sources\Display\DisplayManager.cpp">
+				</File>
+				<File
+					RelativePath=".\Sources\Display\DisplayManager.h">
+				</File>
+				<File
+					RelativePath=".\Sources\Display\DisplayManager.inl">
+				</File>
+				<File
+					RelativePath="Sources\Display\Root.h">
+				</File>
+				<Filter
+					Name="DisplayParameters"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Display\DisplayParameters\DisplayParameters.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\DisplayParameters\DisplayParameters.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\DisplayParameters\DisplayParameters.inl">
+					</File>
+					<File
+						RelativePath="Sources\Display\DisplayParameters\Root.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="Viewport"
+					Filter="">
+					<File
+						RelativePath="Sources\Display\Viewport\Root.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Viewport\Viewport.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Viewport\ViewPort.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Viewport\ViewportList.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Viewport\ViewPortList.h">
+					</File>
+					<Filter
+						Name="Filter"
+						Filter="">
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\Filter.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\Filter.h">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\Filter.inl">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\FilterLayer.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\FilterLayer.h">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\FilterLayer.inl">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\FilterScratch.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\FilterScratch.h">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\FilterScratch.inl">
+						</File>
+						<File
+							RelativePath="Sources\Display\Viewport\Filter\Root.h">
+						</File>
+					</Filter>
+				</Filter>
+				<Filter
+					Name="Statistics"
+					Filter="">
+					<File
+						RelativePath="Sources\Display\Statistics\Root.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Statistics\Statistics.cpp">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Statistics\Statistics.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Statistics\Statistics.inl">
+					</File>
+					<File
+						RelativePath="Sources\Display\Statistics\StatsEntityABC.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Display\Statistics\StatsEntityABC.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\Statistics\StatsEntityGraph.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Display\Statistics\StatsEntityGraph.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\Statistics\StatsEntityText.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Display\Statistics\StatsEntityText.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="Sorted zone"
+					Filter="">
+					<File
+						RelativePath=".\Sources\Display\Sorted zone\SortedPortalZone.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Sorted zone\SortedPortalZone.h">
+					</File>
+					<File
+						RelativePath=".\Sources\Display\Sorted zone\SortedPortalZone.inl">
+					</File>
+				</Filter>
+				<Filter
+					Name="TransparentObject"
+					Filter="">
+					<File
+						RelativePath="Sources\Display\TransparentObject\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\TransparentObject\TransparentObject.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Display\TransparentObject\TransparentObject.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\TransparentObject\TransparentObject.inl">
+					</File>
+				</Filter>
+				<Filter
+					Name="HdrObject"
+					Filter="">
+					<File
+						RelativePath="Sources\Display\HdrObject\HdrObject.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32"
+							ExcludedFromBuild="TRUE">
+							<Tool
+								Name="VCCLCompilerTool"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Display\HdrObject\HdrObject.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\HdrObject\HdrObject.inl">
+					</File>
+					<File
+						RelativePath="Sources\Display\HdrObject\Root.h">
+					</File>
+				</Filter>
+				<Filter
+					Name="SceneGraph"
+					Filter="">
+					<File
+						RelativePath="Sources\Display\SceneGraph\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\SceneGraph\SceneGraph.cpp">
+						<FileConfiguration
+							Name="Win32 Release|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Debug|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 FastDebug|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32 Master|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Debug|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="PS3 PPU Release|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+						<FileConfiguration
+							Name="Win32_Profile|Win32">
+							<Tool
+								Name="VCCLCompilerTool"
+								ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						</FileConfiguration>
+					</File>
+					<File
+						RelativePath="Sources\Display\SceneGraph\SceneGraph.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\SceneGraph\SceneGraph.inl">
+					</File>
+				</Filter>
+				<Filter
+					Name="Culling"
+					Filter="">
+					<File
+						RelativePath="Sources\Display\Culling\ICulling.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\Culling\Root.h">
+					</File>
+					<File
+						RelativePath="Sources\Display\Culling\RoughForce.cpp">
+					</File>
+					<File
+						RelativePath="Sources\Display\Culling\RoughForce.h">
+					</File>
+					<Filter
+						Name="SortedObject"
+						Filter="">
+						<File
+							RelativePath="Sources\Display\SortedObject\Root.h">
+						</File>
+						<File
+							RelativePath="Sources\Display\SortedObject\SortedObject.cpp">
+						</File>
+						<File
+							RelativePath="Sources\Display\SortedObject\SortedObject.h">
+						</File>
+					</Filter>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="Animation"
+				Filter="">
+			</Filter>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

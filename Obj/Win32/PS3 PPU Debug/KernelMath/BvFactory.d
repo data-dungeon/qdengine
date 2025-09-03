@@ -1,0 +1,40 @@
+../Obj/Win32/PS3PPU~1/KERNEL~2/BvFactory.obj:  \
+ d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/BoundingVolume/BvFactory.cpp \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/BoundingVolume/Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/BoundingVolume/../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/BoundingVolume/../../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/BoundingVolume/../../../Root.h \
+  d:/Incoming/envoiSony/KernelMath/Sources/Math/Geometry/BoundingVolume/../../../../../Root.h \
+  ../KernelCore/Sources/Mem/MemConfig.h \
+  ../KernelCore/Sources/Core/NewDelete.h \
+  ../KernelCore/Sources/Core/Types.h ../KernelCore/Sources/Core/Macros.h \
+  ../KernelCore/Sources/Core/Assert.h \
+  ../KernelCore/Sources/Core/Constants.h \
+  ../KernelCore/Sources/Core/Message.h \
+  ../KernelCore/Sources/Mem/MemInterface.h \
+  ../KernelCore/Sources/Mem/MemLibIdInterface.h \
+  ../KernelCore/Sources/Mem/MemLibId.h \
+  ../KernelCore/Sources/Mem/MemConfigInterface.h \
+  ../KernelCore/Sources/Mem/Mem.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/BvFactory.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/BoundingVolume.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/AABB/AABB.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/Vector.h \
+  ../KernelCore/Sources/Includes_PS3/Includes_PS3.h \
+  ../KernelCore/Sources/Core/DisableForceUseMath.h \
+  ../KernelCore/Sources/Core/ForceUseMath.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/VectorGen.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/VectorPS3.h \
+  ../KernelCore/Sources/Stream/iostream.h \
+  ../KernelMath/Sources/Math/Math.h \
+  ../KernelCore/Sources/Includes/Includes.h \
+  ../KernelMath/Sources/Math/Geometry/More/Angle3D.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes1D/Vector/VectorPacked.h \
+  ../KernelMath/Sources/Math/Geometry/Shapes/Shapes0D/Point4D/Point4D.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/OBB/OBB.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/Sphere/Sphere.h \
+  ../KernelCore/Sources/Template/QDT_Vector.h \
+  ../KernelCore/Sources/Template/QDT_Vector.inl \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/Cylinder/Cylinder.h \
+  ../KernelMath/Sources/Math/Geometry/BoundingVolume/BoundingBox/BoundingBox.h \
+  ../KernelCore/Sources/stream/iostream.h

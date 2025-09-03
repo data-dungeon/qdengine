@@ -1,0 +1,62 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_TRANSFORMATION
+//	The SIMPLE_TRANSFORMATION shader implements simple transformation
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+
+#define UVFixMatrix   register0
+#define offsets       register1  // 8 x Float2 offset
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (
+		   float4                  position : POSITION,				// Local-space position
+           float2                  texCoord : TEXCOORD0,			// Diffuse texture coordinate
+
+		   uniform float4     UVFixMatrix : register (c0),
+           uniform float4     offsets[4]  : register (c1),   // 8 x Float2 offset
+
+           out float4     oPosition  : POSITION,			// Output clip-space position
+		   out float2     offset0    : TEXCOORD0, // Output diffuse texture coordinate
+           out float2     offset1    : TEXCOORD1, // 8 x Float2 offset
+           out float2     offset2    : TEXCOORD2,
+           out float2     offset3    : TEXCOORD3,
+		   out float2     offset4    : TEXCOORD4,
+		   out float2     offset5    : TEXCOORD5,
+		   out float2     offset6    : TEXCOORD6,
+		   out float2     offset7    : TEXCOORD7
+		   )
+{
+    oPosition = position;
+
+    float2 center = (UVFixMatrix.xy * texCoord) + UVFixMatrix.zw;
+	offset0 = center + offsets[0].xy;
+	offset1 = center + offsets[0].zw;
+	offset2 = center + offsets[1].xy;
+	offset3 = center + offsets[1].zw;
+	offset4 = center + offsets[2].xy;
+	offset5 = center + offsets[2].zw;
+	offset6 = center + offsets[3].xy;
+	offset7 = center + offsets[3].zw;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

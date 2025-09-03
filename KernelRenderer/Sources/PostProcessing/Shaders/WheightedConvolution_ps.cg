@@ -1,0 +1,72 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+
+#define offsets0   register0  // 8 x Float2 offset
+#define offsets1   register1
+#define offsets2   register2
+#define offsets3   register3
+
+#define wheights0  register4  // 8 x Float4 wheigt
+#define wheights1  register5
+#define wheights2  register6
+#define wheights3  register7
+#define wheights4  register8
+#define wheights5  register9
+#define wheights6  register10
+#define wheights7  register11
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2             texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+           uniform sampler2D  diffuseMap  : register (s0),  // Diffuse texture map
+
+           uniform float4     offsets0    : register (c0),   // 8 x Float2 offset
+           uniform float4     offsets1    : register (c1),
+           uniform float4     offsets2    : register (c2),
+           uniform float4     offsets3    : register (c3),
+
+		   uniform float4     wheights0   : register (c4),  // 8 x Float4 wheigt
+		   uniform float4     wheights1   : register (c5),
+		   uniform float4     wheights2   : register (c6),
+		   uniform float4     wheights3   : register (c7),
+		   uniform float4     wheights4   : register (c8),
+		   uniform float4     wheights5   : register (c9),
+		   uniform float4     wheights6   : register (c10),
+		   uniform float4     wheights7   : register (c11),
+
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+	oColor =  tex2D(diffuseMap, texCoord + offsets0.xy) * wheights0;
+	oColor += tex2D(diffuseMap, texCoord + offsets0.zw) * wheights1;
+	oColor += tex2D(diffuseMap, texCoord + offsets1.xy) * wheights2;
+	oColor += tex2D(diffuseMap, texCoord + offsets1.zw) * wheights3;
+	oColor += tex2D(diffuseMap, texCoord + offsets2.xy) * wheights4;
+	oColor += tex2D(diffuseMap, texCoord + offsets2.zw) * wheights5;
+	oColor += tex2D(diffuseMap, texCoord + offsets3.xy) * wheights6;
+	oColor += tex2D(diffuseMap, texCoord + offsets3.zw) * wheights7;
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

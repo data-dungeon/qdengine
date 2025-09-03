@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[Runtime.vcproj]
+SCC_Aux_Path = "P4SCC#qd-perforce:1666##sbe##SBE-QD-DEV9-MAIN"
+SCC_Project_Name = Perforce Project

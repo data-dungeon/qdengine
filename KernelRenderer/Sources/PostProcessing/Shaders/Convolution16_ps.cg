@@ -1,0 +1,85 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define diffuseMap	texture0
+
+#define offsets    register0  // 16 x Float2 offset
+/*
+#define offsets1   register1
+#define offsets2   register2
+#define offsets3   register3
+#define offsets4   register4 
+#define offsets5   register5
+#define offsets6   register6
+#define offsets7   register7*/
+
+#define wheights   register8  // 16 x Float4 wheigt
+/*
+#define wheights1  register9
+#define wheights2  register10
+#define wheights3  register11
+#define wheights4  register12
+#define wheights5  register13
+#define wheights6  register14
+#define wheights7  register15
+#define wheights8  register16 
+#define wheights9  register17
+#define wheights10  register18
+#define wheights11  register19
+#define wheights12  register20
+#define wheights13  register21
+#define wheights14  register22
+#define wheights15  register23*/
+
+
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2               texCoord    : TEXCOORD0,		// Lerped diffuse texture coordinate
+           uniform samplerRECT  diffuseMap  : register (s0),  // Diffuse texture map
+
+           uniform float4     offsets[8]    : register (c0),   // 16 x Float2 offset
+
+		   uniform float4     wheights[16]   : register (c8),  // 16 x Float4 wheigt
+
+           out float4         oColor      : COLOR)			// Final fragment color
+{
+	oColor =  texRECT(diffuseMap, texCoord + offsets[0].xy) * wheights[0];
+	oColor += texRECT(diffuseMap, texCoord + offsets[0].zw) * wheights[1];
+	oColor += texRECT(diffuseMap, texCoord + offsets[1].xy) * wheights[2];
+	oColor += texRECT(diffuseMap, texCoord + offsets[1].zw) * wheights[3];
+	oColor += texRECT(diffuseMap, texCoord + offsets[2].xy) * wheights[4];
+	oColor += texRECT(diffuseMap, texCoord + offsets[2].zw) * wheights[5];
+	oColor += texRECT(diffuseMap, texCoord + offsets[3].xy) * wheights[6];
+	oColor += texRECT(diffuseMap, texCoord + offsets[3].zw) * wheights[7];
+	oColor += texRECT(diffuseMap, texCoord + offsets[4].xy) * wheights[8];
+	oColor += texRECT(diffuseMap, texCoord + offsets[4].zw) * wheights[9];
+	oColor += texRECT(diffuseMap, texCoord + offsets[5].xy) * wheights[10];
+	oColor += texRECT(diffuseMap, texCoord + offsets[5].zw) * wheights[11];
+	oColor += texRECT(diffuseMap, texCoord + offsets[6].xy) * wheights[12];
+	oColor += texRECT(diffuseMap, texCoord + offsets[6].zw) * wheights[13];
+	oColor += texRECT(diffuseMap, texCoord + offsets[7].xy) * wheights[14];
+	oColor += texRECT(diffuseMap, texCoord + offsets[7].zw) * wheights[15];
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

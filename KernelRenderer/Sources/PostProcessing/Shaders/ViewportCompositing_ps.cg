@@ -1,0 +1,80 @@
+//*****************************************************************************
+//
+// Copyright (C) 2000-2005 Quantic Dream SA
+//
+// These coded instructions, statements and computer programs contain
+// unpublished information proprietary to Quantic Dream SA and are 
+// protected by French and EEC copyright laws. They may not be 
+// disclosed to third parties or copied or duplicated, in whole or in part, 
+// without prior written consent of Quantic Dream SA
+//
+// Unpublished-rights reserved under the Copyright Laws of the EEC.
+//
+//*****************************************************************************
+//
+//	SHADER:	SIMPLE_FRAGMENT
+//
+//	05-09-29:	RMA - Created
+//*****************************************************************************
+
+// Defines to convert Cg parameters into register indices
+#define Image	texture0
+#define Noise	texture1
+#define Mask	texture3
+
+#define ColorTransform register0
+#define NoiseSetup	   register4   // [LerpFactor, Cutoff, Scale, 0.0]
+#define OutAlpha 	   register5 
+//=============================================================================
+//	CODE STARTS HERE
+//=============================================================================
+
+void main (float2     TexCoord         : TEXCOORD0,
+
+#ifdef NOISE
+		   float2     TexCoordNoise1   : TEXCOORD1,	
+		   float2     TexCoordNoise2   : TEXCOORD2,
+		   uniform sampler2D	Noise  : register (s1),
+		   uniform float4     NoiseSetup     : register (c4),
+#endif
+
+#ifdef MASK
+		   float2     TexCoordMask     : TEXCOORD3,	
+		   uniform sampler2D	Mask  : register (s3),
+#endif
+
+           uniform samplerRECT  Image  : register (s0),  
+
+#ifdef COLORCONTROL
+		   uniform float4x4   ColorTransform : register (c0),
+#endif
+		   uniform float	  OutAlpha : register (c5),
+
+           out float4           oColor      : COLOR)		  // Final fragment color
+{
+	float4 color;
+	color = texRECT(Image, TexCoord);
+
+#ifdef NOISE
+	Float noiseVal1 = tex2D(Noise, TexCoordNoise1);
+	Float noiseVal2 = tex2D(Noise, TexCoordNoise2);
+	Float noiseVal  = lerp(noiseVal1, noiseVal2, NoiseSetup.x) - NoiseSetup.y;
+	color.rgb += noiseVal * NoiseSetup.z;
+#endif
+
+#ifdef COLORCONTROL
+	oColor.rgb = mul(ColorTransform, color).rgb;
+#else
+	oColor.rgb = color.rgb;
+#endif
+
+#ifdef MASK
+	oColor.a =  OutAlpha * tex2D(Mask, TexCoordMask).r;
+#else
+	oColor.a =  OutAlpha;
+#endif
+}
+
+//=============================================================================
+//	CODE ENDS HERE
+//=============================================================================

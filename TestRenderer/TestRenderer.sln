@@ -1,0 +1,174 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestRenderer", "TestRenderer.vcproj", "{F3593C07-919B-4828-8A54-E87EB27228CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{238F3E10-1BD5-4969-BF61-B760102B8B31} = {238F3E10-1BD5-4969-BF61-B760102B8B31}
+		{5E4A374A-903E-4FB9-8427-920BF6860480} = {5E4A374A-903E-4FB9-8427-920BF6860480}
+		{97ADBC55-0032-404A-B832-915406665EE1} = {97ADBC55-0032-404A-B832-915406665EE1}
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59} = {82D2B69D-3F54-4974-A9AA-8CE19402DF59}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KernelRenderer", "..\KernelRenderer\KernelRenderer.vcproj", "{238F3E10-1BD5-4969-BF61-B760102B8B31}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KernelCore", "..\kernelcore\KernelCore.vcproj", "{5E4A374A-903E-4FB9-8427-920BF6860480}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KernelMath", "..\KernelMath\KernelMath.vcproj", "{82D2B69D-3F54-4974-A9AA-8CE19402DF59}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KernelInput", "..\KernelInput\KernelInput.vcproj", "{97ADBC55-0032-404A-B832-915406665EE1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccProjectName0 = RD/QDT\u00203_5\u0020PC
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Perforce\u0020SCM
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection0 = TestRenderer\\
+		SolutionUniqueID = {3F4458F6-4318-4668-9422-CFC6A4041FF2}
+		SccProjectUniqueName1 = TestRenderer.vcproj
+		SccLocalPath1 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection1 = TestRenderer\\
+		SccProjectUniqueName2 = ..\\KernelRenderer\\KernelRenderer.vcproj
+		SccLocalPath2 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection2 = KernelRenderer\\
+		SccProjectUniqueName3 = ..\\kernelcore\\KernelCore.vcproj
+		SccProjectName3 = RD/QDT\u00203_5\u0020PC/kernelcore
+		SccLocalPath3 = ..\\kernelcore
+		CanCheckoutShared = true
+		SccProjectUniqueName4 = ..\\KernelMath\\KernelMath.vcproj
+		SccLocalPath4 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection4 = KernelMath\\
+		SccProjectUniqueName5 = ..\\KernelInput\\KernelInput.vcproj
+		SccLocalPath5 = ..
+		CanCheckoutShared = true
+		SccProjectFilePathRelativizedFromConnection5 = KernelInput\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		PS3 PPU Debug = PS3 PPU Debug
+		PS3 PPU Profile = PS3 PPU Profile
+		PS3 PPU Release = PS3 PPU Release
+		PS3 SPU Debug = PS3 SPU Debug
+		PS3 SPU Release = PS3 SPU Release
+		Win32 Debug = Win32 Debug
+		Win32 FastDebug = Win32 FastDebug
+		Win32 Master = Win32 Master
+		Win32 Release = Win32 Release
+		Win32_Profile = Win32_Profile
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 PPU Debug.ActiveCfg = PS3 PPU Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 PPU Debug.Build.0 = PS3 PPU Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 PPU Profile.ActiveCfg = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 PPU Profile.Build.0 = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 PPU Release.ActiveCfg = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 PPU Release.Build.0 = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 SPU Debug.ActiveCfg = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 SPU Debug.Build.0 = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 SPU Release.ActiveCfg = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.PS3 SPU Release.Build.0 = PS3 PPU Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 Debug.ActiveCfg = Win32 Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 Debug.Build.0 = Win32 Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 FastDebug.ActiveCfg = Win32 FastDebug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 FastDebug.Build.0 = Win32 FastDebug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 Master.ActiveCfg = Win32 Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 Master.Build.0 = Win32 Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 Release.ActiveCfg = Win32 Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32 Release.Build.0 = Win32 Release|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32_Profile.ActiveCfg = Win32 Debug|Win32
+		{F3593C07-919B-4828-8A54-E87EB27228CB}.Win32_Profile.Build.0 = Win32 Debug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 PPU Debug.ActiveCfg = PS3 PPU Debug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 PPU Debug.Build.0 = PS3 PPU Debug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 PPU Profile.ActiveCfg = PS3 PPU Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 PPU Profile.Build.0 = PS3 PPU Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 PPU Release.ActiveCfg = PS3 PPU Release|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 PPU Release.Build.0 = PS3 PPU Release|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 SPU Debug.ActiveCfg = PS3 PPU Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 SPU Debug.Build.0 = PS3 PPU Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 SPU Release.ActiveCfg = PS3 PPU Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.PS3 SPU Release.Build.0 = PS3 PPU Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 Debug.ActiveCfg = Win32 Debug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 Debug.Build.0 = Win32 Debug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 FastDebug.ActiveCfg = Win32 FastDebug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 FastDebug.Build.0 = Win32 FastDebug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 Master.ActiveCfg = Win32 FastDebug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 Master.Build.0 = Win32 FastDebug|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 Release.ActiveCfg = Win32 Release|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32 Release.Build.0 = Win32 Release|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32_Profile.ActiveCfg = Win32_Profile|Win32
+		{238F3E10-1BD5-4969-BF61-B760102B8B31}.Win32_Profile.Build.0 = Win32_Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 PPU Debug.ActiveCfg = PS3 PPU Debug|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 PPU Debug.Build.0 = PS3 PPU Debug|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 PPU Profile.ActiveCfg = PS3 PPU Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 PPU Profile.Build.0 = PS3 PPU Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 PPU Release.ActiveCfg = PS3 PPU Release|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 PPU Release.Build.0 = PS3 PPU Release|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 SPU Debug.ActiveCfg = PS3 PPU Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 SPU Debug.Build.0 = PS3 PPU Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 SPU Release.ActiveCfg = PS3 PPU Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.PS3 SPU Release.Build.0 = PS3 PPU Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 Debug.ActiveCfg = Win32 Debug|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 Debug.Build.0 = Win32 Debug|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 FastDebug.ActiveCfg = Win32 FastDebug|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 FastDebug.Build.0 = Win32 FastDebug|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 Master.ActiveCfg = Win32 Master|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 Master.Build.0 = Win32 Master|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 Release.ActiveCfg = Win32 Release|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32 Release.Build.0 = Win32 Release|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32_Profile.ActiveCfg = Win32_Profile|Win32
+		{5E4A374A-903E-4FB9-8427-920BF6860480}.Win32_Profile.Build.0 = Win32_Profile|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 PPU Debug.ActiveCfg = PS3 PPU Debug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 PPU Debug.Build.0 = PS3 PPU Debug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 PPU Profile.ActiveCfg = PS3 PPU Profile|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 PPU Profile.Build.0 = PS3 PPU Profile|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 PPU Release.ActiveCfg = PS3 PPU Release|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 PPU Release.Build.0 = PS3 PPU Release|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 SPU Debug.ActiveCfg = PS3 SPU Debug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 SPU Debug.Build.0 = PS3 SPU Debug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 SPU Release.ActiveCfg = PS3 SPU Release|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.PS3 SPU Release.Build.0 = PS3 SPU Release|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 Debug.ActiveCfg = Win32 Debug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 Debug.Build.0 = Win32 Debug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 FastDebug.ActiveCfg = Win32 FastDebug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 FastDebug.Build.0 = Win32 FastDebug|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 Master.ActiveCfg = Win32 Master|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 Master.Build.0 = Win32 Master|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 Release.ActiveCfg = Win32 Release|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32 Release.Build.0 = Win32 Release|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32_Profile.ActiveCfg = Win32_Profile|Win32
+		{82D2B69D-3F54-4974-A9AA-8CE19402DF59}.Win32_Profile.Build.0 = Win32_Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 PPU Debug.ActiveCfg = PS3 PPU Debug|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 PPU Debug.Build.0 = PS3 PPU Debug|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 PPU Profile.ActiveCfg = PS3 PPU Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 PPU Profile.Build.0 = PS3 PPU Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 PPU Release.ActiveCfg = PS3 PPU Release|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 PPU Release.Build.0 = PS3 PPU Release|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 SPU Debug.ActiveCfg = PS3 PPU Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 SPU Debug.Build.0 = PS3 PPU Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 SPU Release.ActiveCfg = PS3 PPU Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.PS3 SPU Release.Build.0 = PS3 PPU Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 Debug.ActiveCfg = Win32 Debug|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 Debug.Build.0 = Win32 Debug|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 FastDebug.ActiveCfg = Win32 FastDebug|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 FastDebug.Build.0 = Win32 FastDebug|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 Master.ActiveCfg = Win32 Master|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 Master.Build.0 = Win32 Master|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 Release.ActiveCfg = Win32 Release|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32 Release.Build.0 = Win32 Release|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32_Profile.ActiveCfg = Win32_Profile|Win32
+		{97ADBC55-0032-404A-B832-915406665EE1}.Win32_Profile.Build.0 = Win32_Profile|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
