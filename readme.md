@@ -2,6 +2,8 @@
 
 Source code for Quantic Dream's in-house engine. This copy is combined from copies dated from April and July of 2006, which were obtained and sorted from an earlier leak from Sony's private developer forum.
 
+A mirror with the original archives is available [here](https://archive.org/details/qd-sources).
+
 This is available here for the sake of preservation, research and nothing more. Assets are not included (not that they were even available).
 
 **Mind that the source files seem to use ISO-8859-1 encoding, so be sure to configure that in your editor if you don't want to mess things up!**
